@@ -20,6 +20,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 🐳 [Dockerfile](file:///Users/biswanathgiri/GenAI%20Roadmap/Dockerfile) | Dockerfile | Hardened, non-root Docker build config optimized to deploy the MCP server via SSE transport on Google Cloud Run. |
 | 📖 [gcp_deployment_guide.md](file:///Users/biswanathgiri/GenAI%20Roadmap/gcp_deployment_guide.md) | Markdown | Production-grade planning and deployment guide matching the phases of the GCP Agentic AI Platform Roadmap. |
 | 📦 [requirements.txt](file:///Users/biswanathgiri/GenAI%20Roadmap/requirements.txt) | Requirements | List of Python dependencies required to run the scripts locally. |
+| 📖 [agentic_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/agentic_notes.md) | Markdown | Study & reference notes explaining core architectural and code concepts of ADK, MCP, and A2A. |
 
 ## 🛠️ Software Installation Guide
 
