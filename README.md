@@ -23,6 +23,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [agentic_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/agentic_notes.md) | Markdown | Study & reference notes explaining core architectural and code concepts of ADK, MCP, and A2A. |
 | 📖 [agentic_foundations_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/agentic_foundations_notes.md) | Markdown | Study notes explaining foundations of AI Agents, Multi-Agent systems, MCP, and A2A. |
 | 📖 [gcp_networking_exam_guide.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/gcp_networking_exam_guide.md) | Markdown | Comprehensive Google Cloud Networking Exam Preparation Guide (Chapters 1-8). |
+| 📖 [forward_deployed_engineer_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/forward_deployed_engineer_notes.md) | Markdown | Study notes outlining the Forward Deployed Engineer (FDE) role, responsibilities, and skillsets. |
 
 ## 🛠️ Software Installation Guide
 
