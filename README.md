@@ -28,6 +28,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 🖼️ [fde_path_to_impact.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/fde_path_to_impact.png) | Image | Infographic diagram outlining the FDE's journey from business problem discovery to delivering measurable impact. |
 | 🖼️ [harness_agentic_system.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/harness_agentic_system.png) | Image | Infographic diagram outlining the key pillars of Harness Engineering in the context of an Agentic AI system. |
 | 📖 [devops_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/DevOps/devops_100_interview_questions.md) | Markdown | 100 essential DevOps interview questions and answers, covering culture, CI/CD, Docker, K8s, IaC, Cloud, and SRE. |
+| 📖 [agentic_ai_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/AgenticAI/agentic_ai_100_interview_questions.md) | Markdown | 100 essential Agentic AI Architect and Engineer interview questions and answers, covering autonomy, reasoning, A2A, MCP, scaling, FinOps, and safety. |
 
 ## 🛠️ Software Installation Guide
 
