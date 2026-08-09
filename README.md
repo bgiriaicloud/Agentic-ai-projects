@@ -25,6 +25,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [gcp_networking_exam_guide.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/gcp_networking_exam_guide.md) | Markdown | Comprehensive Google Cloud Networking Exam Preparation Guide (Chapters 1-8). |
 | 📖 [forward_deployed_engineer_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/forward_deployed_engineer_notes.md) | Markdown | Study notes outlining the Forward Deployed Engineer (FDE) role, responsibilities, and skillsets. |
 | 📖 [harness_engineering_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/harness_engineering_notes.md) | Markdown | Study notes defining Harness Engineering in 2026 across DevOps pipelines, AI evaluations, and wiring design. |
+| 🖼️ [fde_path_to_impact.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/fde_path_to_impact.png) | Image | Infographic diagram outlining the FDE's journey from business problem discovery to delivering measurable impact. |
 
 ## 🛠️ Software Installation Guide
 

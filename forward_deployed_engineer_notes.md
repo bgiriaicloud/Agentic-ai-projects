@@ -7,6 +7,8 @@ Based on industry frameworks and FDE roadmaps, this note details the lifecycle, 
 ## 1. The FDE Mission
 An FDE works directly with customers to bridge the gap between **AI innovation and measurable business impact**, turning cutting-edge AI, cloud, and software capabilities into secure, production-ready solutions.
 
+![FDE: Path from Vision to Impact](/Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/fde_path_to_impact.png)
+
 ```
 ┌─────────────────────────────────┐      FDE Bridges      ┌─────────────────────────────────┐
 │     Customer Business Problems  ├──────────────────────►│    Measurable Business Impact   │
