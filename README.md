@@ -30,6 +30,8 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [devops_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/DevOps/devops_100_interview_questions.md) | Markdown | 100 essential DevOps interview questions and answers, covering culture, CI/CD, Docker, K8s, IaC, Cloud, and SRE. |
 | 📖 [agentic_ai_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/AgenticAI/agentic_ai_100_interview_questions.md) | Markdown | 100 essential Agentic AI Architect and Engineer interview questions and answers, covering autonomy, reasoning, A2A, MCP, scaling, FinOps, and safety. |
 | 📖 [gen_ai_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GenAI/gen_ai_100_interview_questions.md) | Markdown | 100 essential Generative AI Engineer interview questions and answers, covering architectures, RAG, PEFT, evaluation, LLMOps, and security. |
+| 📖 [fde_interview_questions_part1.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/FDE/fde_interview_questions_part1.md) | Markdown | Volume 1 of 200 Forward Deployed Engineer (FDE) interview questions and answers (Q1 - Q100). |
+| 📖 [fde_interview_questions_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/FDE/fde_interview_questions_part2.md) | Markdown | Volume 2 of 200 Forward Deployed Engineer (FDE) interview questions and answers (Q101 - Q200). |
 
 ## 🛠️ Software Installation Guide
 
