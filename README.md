@@ -26,6 +26,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [forward_deployed_engineer_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/forward_deployed_engineer_notes.md) | Markdown | Study notes outlining the Forward Deployed Engineer (FDE) role, responsibilities, and skillsets. |
 | 📖 [harness_engineering_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/harness_engineering_notes.md) | Markdown | Study notes defining Harness Engineering in 2026 across DevOps pipelines, AI evaluations, and wiring design. |
 | 🖼️ [fde_path_to_impact.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/fde_path_to_impact.png) | Image | Infographic diagram outlining the FDE's journey from business problem discovery to delivering measurable impact. |
+| 🖼️ [harness_agentic_system.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/harness_agentic_system.png) | Image | Infographic diagram outlining the key pillars of Harness Engineering in the context of an Agentic AI system. |
 
 ## 🛠️ Software Installation Guide
 
