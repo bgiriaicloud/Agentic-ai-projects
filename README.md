@@ -35,6 +35,9 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [cloud_architect_part1.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Architect/cloud_architect_part1.md) | Markdown | Volume 1 of 250 Cloud Architect interview questions and answers (Q1 - Q90). |
 | 📖 [cloud_architect_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Architect/cloud_architect_part2.md) | Markdown | Volume 2 of 250 Cloud Architect interview questions and answers (Q91 - Q170). |
 | 📖 [cloud_architect_part3.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Architect/cloud_architect_part3.md) | Markdown | Volume 3 of 250 Cloud Architect interview questions and answers (Q171 - Q250). |
+| 📖 [cloud_engineer_part1.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part1.md) | Markdown | Volume 1 of 250 Cloud Engineer interview questions and answers (Q1 - Q90). |
+| 📖 [cloud_engineer_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part2.md) | Markdown | Volume 2 of 250 Cloud Engineer interview questions and answers (Q91 - Q170). |
+| 📖 [cloud_engineer_part3.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part3.md) | Markdown | Volume 3 of 250 Cloud Engineer interview questions and answers (Q171 - Q250). |
 
 ## 🛠️ Software Installation Guide
 
