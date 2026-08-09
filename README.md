@@ -40,6 +40,33 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [cloud_engineer_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part2.md) | Markdown | Volume 2 of 250 Cloud Engineer interview questions and answers (Q91 - Q170). |
 | 📖 [cloud_engineer_part3.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part3.md) | Markdown | Volume 3 of 250 Cloud Engineer interview questions and answers (Q171 - Q250). |
 
+## 📂 Directory Structure
+
+Below is the visual and text-based directory structure of a production-ready Enterprise Agentic AI project:
+
+![Agentic AI Project Structure](/Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/agentic_ai_project_structure.png)
+
+```text
+agentic-ai-platform/
+├── agents/                  # Cognitive reasoning agent files
+│   ├── supervisor_agent.py  # Coordinating Supervisor agent orchestrating turns
+│   └── worker_agents.py    # Specialized execution child subagents (A2A)
+├── mcp_servers/             # Model Context Protocol servers
+│   └── mcp_gcp_server.py    # Exposes custom tools and API connectors via stdio/SSE
+├── tools/                   # Custom tool function declarations
+│   └── custom_tools.py      # Core Python tool systems bound to agents
+├── evals/                   # Evaluation and test harnesses
+│   └── test_harness.py      # Automation pipelines auditing accuracy/groundedness
+├── config.yaml              # Global orchestration parameters
+├── docker-compose.yml       # Docker compose config for local multi-container environments
+├── Dockerfile               # Production containerization build
+├── main.py                  # CLI application entry point
+├── README.md                # Platform documentation and file index
+└── requirements.txt         # Pinned python library dependencies
+```
+
+---
+
 ## 🛠️ Software Installation Guide
 
 To configure your local environment for executing and deploying this agentic platform, follow these steps:
