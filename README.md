@@ -32,6 +32,9 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [gen_ai_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GenAI/gen_ai_100_interview_questions.md) | Markdown | 100 essential Generative AI Engineer interview questions and answers, covering architectures, RAG, PEFT, evaluation, LLMOps, and security. |
 | 📖 [fde_interview_questions_part1.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/FDE/fde_interview_questions_part1.md) | Markdown | Volume 1 of 200 Forward Deployed Engineer (FDE) interview questions and answers (Q1 - Q100). |
 | 📖 [fde_interview_questions_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/FDE/fde_interview_questions_part2.md) | Markdown | Volume 2 of 200 Forward Deployed Engineer (FDE) interview questions and answers (Q101 - Q200). |
+| 📖 [cloud_architect_part1.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Architect/cloud_architect_part1.md) | Markdown | Volume 1 of 250 Cloud Architect interview questions and answers (Q1 - Q90). |
+| 📖 [cloud_architect_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Architect/cloud_architect_part2.md) | Markdown | Volume 2 of 250 Cloud Architect interview questions and answers (Q91 - Q170). |
+| 📖 [cloud_architect_part3.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Architect/cloud_architect_part3.md) | Markdown | Volume 3 of 250 Cloud Architect interview questions and answers (Q171 - Q250). |
 
 ## 🛠️ Software Installation Guide
 
