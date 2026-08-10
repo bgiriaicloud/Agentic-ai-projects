@@ -6,6 +6,8 @@ This project demonstrates a **Multi-Agent Supervisor Architecture** utilizing th
 
 ## 🚀 Architectural Pattern
 
+![Multi-Agent A2A Supervisor Architecture](multi_agent_architecture.png)
+
 ```
                ┌───────────────────────────────┐
                │         Business User         │
