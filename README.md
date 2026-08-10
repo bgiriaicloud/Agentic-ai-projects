@@ -39,6 +39,9 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 🖼️ [terraform_architecture.svg](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/terraform/terraform_architecture.svg) | Image | High-fidelity vector architecture diagram outlining Terraform config compilation and provisioning to GCP, AWS, and Azure. |
 | 🖼️ [terraform_architecture.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/terraform/terraform_architecture.png) | Image | High-fidelity PNG architecture diagram outlining Terraform config compilation and provisioning to GCP, AWS, and Azure. |
 | 📖 [devops_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/DevOps/devops_100_interview_questions.md) | Markdown | 100 essential DevOps interview questions and answers, covering culture, CI/CD, Docker, K8s, IaC, Cloud, and SRE. |
+| 📖 [git_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GitHub/git_notes.md) | Markdown | Comprehensive reference notes covering Git core areas, states, local and remote branching, rebases, and resets. |
+| 📖 [github_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GitHub/github_notes.md) | Markdown | Comprehensive reference notes covering GitHub PRs, Fork-and-Pull models, secrets configurations, and gh CLI commands. |
+| 📖 [github_actions_notes.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GitHub/github_actions_notes.md) | Markdown | Comprehensive reference notes covering GitHub Actions workflow syntax, triggers, matrix runs, runners, and artifacts. |
 | 📖 [docker_cheat_sheet.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Docker/docker_cheat_sheet.md) | Markdown | Handy cheat sheet indexing essential Docker CLI container run lifecycle commands, volume controls, and network creations. |
 | 📖 [python_part1.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Python/python_part1.md) | Markdown | Volume 1 of 250 Python interview questions and answers (Q1 - Q90) covering types, variables, scopes, and basic parameters. |
 | 📖 [python_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Python/python_part2.md) | Markdown | Volume 2 of 250 Python interview questions and answers (Q91 - Q170) covering OOP, file IO, generators, and decorators. |
@@ -74,6 +77,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📁 [Linux/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Linux) | Project Folder | Standalone folder containing the Linux File System Hierarchy directory tree diagram. |
 | 📁 [terraform/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/terraform) | Project Folder | Standalone folder containing the Terraform multi-cloud deployment architectural diagram. |
 | 📁 [Python/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Python) | Project Folder | Standalone folder containing the 250 essential Python interview questions and answers series. |
+| 📁 [GitHub/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GitHub) | Project Folder | Standalone folder containing Git concepts, GitHub workflows, and GitHub Actions CI/CD references. |
 
 ## 📂 Directory Structure
 
