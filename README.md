@@ -39,6 +39,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [cloud_engineer_part1.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part1.md) | Markdown | Volume 1 of 250 Cloud Engineer interview questions and answers (Q1 - Q90). |
 | 📖 [cloud_engineer_part2.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part2.md) | Markdown | Volume 2 of 250 Cloud Engineer interview questions and answers (Q91 - Q170). |
 | 📖 [cloud_engineer_part3.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part3.md) | Markdown | Volume 3 of 250 Cloud Engineer interview questions and answers (Q171 - Q250). |
+| 📁 [Enterprise_agentic_ai_platform_project/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Enterprise_agentic_ai_platform_project) | Project Folder | Standalone containerized project showcasing ADK agent with Stdio FastMCP server deployed on Cloud Run using Gemini. |
 
 ## 📂 Directory Structure
 
