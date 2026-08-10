@@ -16,6 +16,7 @@ It matches the exact architecture described in the **Conversational Analytics AP
 ## 📂 File Registry
 *   `app.py`: Streamlit front-end dashboard that takes user prompts, triggers the agent, displays the SQL, and renders data grids and charts.
 *   `agentic_bigquery.py`: Google Antigravity SDK (ADK) agent definition containing system instructions, DB schemas (grounding rules), and BigQuery connection tools.
+*   `poc_data_agent.py`: A lightweight, single-file CLI proof-of-concept demonstrating natural-language-to-SQL generation and data querying.
 *   `requirements.txt`: Python package dependencies registry.
 *   `DEPLOYMENT_GUIDE.md`: Manual for deploying the Streamlit app on GCP Cloud Run.
 *   `.env`: Local environment settings file.
@@ -50,3 +51,9 @@ Run the Streamlit application locally:
 streamlit run app.py
 ```
 Open your web browser and navigate to the printed address (default: **`http://localhost:8501`**).
+
+### 4. Run the CLI Proof-of-Concept (POC)
+Alternatively, you can run the lightweight command-line script to test the data agent query results:
+```bash
+python3 poc_data_agent.py "Show the top 5 boy names in CA in 2021"
+```
