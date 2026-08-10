@@ -31,6 +31,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 🖼️ [data_ai_agent_architecture.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/data-ai-agent/data_ai_agent_architecture.png) | Image | Architecture diagram outlining the pipeline flow of the Conversational Analytics BigQuery Data Agent. |
 | 🖼️ [enterprise_agentic_ai_architecture.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Enterprise_agentic_ai_platform_project/enterprise_agentic_ai_architecture.png) | Image | Architecture diagram outlining the GCP Cloud Run container flow of the Enterprise Agentic AI Platform. |
 | 🖼️ [multi_agent_architecture.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/ai-agent/multi_agent_architecture.png) | Image | Architecture diagram outlining the A2A Supervisor Agent delegation flow of the Multi-Agent Platform. |
+| 🖼️ [gke_architecture.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GKE/gke_architecture.png) | Image | Architecture diagram outlining a production GKE regional private cluster layout on Google Cloud Platform. |
 | 📖 [devops_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/DevOps/devops_100_interview_questions.md) | Markdown | 100 essential DevOps interview questions and answers, covering culture, CI/CD, Docker, K8s, IaC, Cloud, and SRE. |
 | 📖 [agentic_ai_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/AgenticAI/agentic_ai_100_interview_questions.md) | Markdown | 100 essential Agentic AI Architect and Engineer interview questions and answers, covering autonomy, reasoning, A2A, MCP, scaling, FinOps, and safety. |
 | 📖 [gen_ai_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GenAI/gen_ai_100_interview_questions.md) | Markdown | 100 essential Generative AI Engineer interview questions and answers, covering architectures, RAG, PEFT, evaluation, LLMOps, and security. |
@@ -45,6 +46,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📁 [Enterprise_agentic_ai_platform_project/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Enterprise_agentic_ai_platform_project) | Project Folder | Standalone containerized project showcasing ADK agent with Stdio FastMCP server deployed on Cloud Run using Gemini. |
 | 📁 [data-ai-agent/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/data-ai-agent) | Project Folder | Standalone containerized data agent querying BigQuery USA names public dataset using ADK and Streamlit visualization. |
 | 📁 [ai-agent/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/ai-agent) | Project Folder | Standalone containerized multi-agent project showcasing A2A supervisor delegation using ADK and Streamlit visualization. |
+| 📁 [GKE/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GKE) | Project Folder | Standalone folder containing the production GKE regional private cluster architectural diagram. |
 
 ## 📂 Directory Structure
 
