@@ -6,6 +6,8 @@ This project demonstrates a production-ready, containerized **Agentic AI Platfor
 
 ## 🚀 Architecture Diagram & Flow
 
+![Enterprise Agentic AI Platform Architecture](enterprise_agentic_ai_architecture.png)
+
 ```
   [User Browser] ──► [FastAPI Web Server] 
                              │
