@@ -6,3 +6,4 @@ python-dotenv
 fastapi
 uvicorn
 jinja2
+google-cloud-vertexai
