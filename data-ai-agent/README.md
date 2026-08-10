@@ -4,6 +4,8 @@ This project implements a **Conversational Analytics Data Agent** that allows us
 
 It matches the exact architecture described in the **Conversational Analytics API** system design:
 
+![Data AI Agent Architecture Diagram](data_ai_agent_architecture.png)
+
 ```
   [Business User] ──► [Streamlit App] ──► [Vertex AI/Gemini (ADK)]
                              ▲                     │
