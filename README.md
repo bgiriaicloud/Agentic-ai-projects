@@ -51,6 +51,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📁 [GKE/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GKE) | Project Folder | Standalone folder containing the production GKE regional private cluster architectural diagram. |
 | 📁 [Kubernetes/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Kubernetes) | Project Folder | Standalone folder containing the 100 essential Kubernetes interview questions and answers guide. |
 | 📁 [Docker/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Docker) | Project Folder | Standalone folder containing the Docker client-daemon architecture diagram. |
+| 📁 [Linux/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Linux) | Project Folder | Standalone folder containing the Linux File System Hierarchy directory tree diagram. |
 
 ## 📂 Directory Structure
 
