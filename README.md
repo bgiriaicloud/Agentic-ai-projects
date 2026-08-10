@@ -34,6 +34,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 🖼️ [gke_architecture.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/GKE/gke_architecture.png) | Image | Architecture diagram outlining a production GKE regional private cluster layout on Google Cloud Platform. |
 | 🖼️ [docker_architecture.png](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Docker/docker_architecture.png) | Image | Architecture diagram illustrating Docker Client, Daemon, Host resource spaces, and Registry links. |
 | 🖼️ [linux_architecture.svg](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Linux/linux_architecture.svg) | Image | High-fidelity vector architecture diagram outlining Linux OS execution rings, SCI, and hardware layers. |
+| 🖼️ [terraform_architecture.svg](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/terraform/terraform_architecture.svg) | Image | High-fidelity vector architecture diagram outlining Terraform config compilation and provisioning to GCP, AWS, and Azure. |
 | 📖 [devops_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/DevOps/devops_100_interview_questions.md) | Markdown | 100 essential DevOps interview questions and answers, covering culture, CI/CD, Docker, K8s, IaC, Cloud, and SRE. |
 | 📖 [kubernetes_100_interview_questions.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Kubernetes/kubernetes_100_interview_questions.md) | Markdown | 100 essential Kubernetes interview questions and answers, covering Control Plane, scheduling, networking, storage, configs, and RBAC security. |
 | 📖 [linux_architecture.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Linux/linux_architecture.md) | Markdown | Architectural diagram and description detailing Linux OS User Space, Kernel Space, and core subsystems. |
@@ -55,6 +56,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📁 [Kubernetes/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Kubernetes) | Project Folder | Standalone folder containing the 100 essential Kubernetes interview questions and answers guide. |
 | 📁 [Docker/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Docker) | Project Folder | Standalone folder containing the Docker client-daemon architecture diagram. |
 | 📁 [Linux/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Linux) | Project Folder | Standalone folder containing the Linux File System Hierarchy directory tree diagram. |
+| 📁 [terraform/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/terraform) | Project Folder | Standalone folder containing the Terraform multi-cloud deployment architectural diagram. |
 
 ## 📂 Directory Structure
 
