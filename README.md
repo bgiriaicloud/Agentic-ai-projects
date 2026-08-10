@@ -43,6 +43,7 @@ This repository contains a reference implementation for an Enterprise Agentic AI
 | 📖 [cloud_engineer_part3.md](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Cloud_Engineer/cloud_engineer_part3.md) | Markdown | Volume 3 of 250 Cloud Engineer interview questions and answers (Q171 - Q250). |
 | 📁 [Enterprise_agentic_ai_platform_project/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/Enterprise_agentic_ai_platform_project) | Project Folder | Standalone containerized project showcasing ADK agent with Stdio FastMCP server deployed on Cloud Run using Gemini. |
 | 📁 [data-ai-agent/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/data-ai-agent) | Project Folder | Standalone containerized data agent querying BigQuery USA names public dataset using ADK and Streamlit visualization. |
+| 📁 [ai-agent/](file:///Users/biswanathgiri/GenAI&AgenticAI%20-Learing%20Roadmap/ai-agent) | Project Folder | Standalone containerized multi-agent project showcasing A2A supervisor delegation using ADK and Streamlit visualization. |
 
 ## 📂 Directory Structure
 
