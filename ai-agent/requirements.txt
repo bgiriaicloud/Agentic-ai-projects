@@ -1,0 +1,6 @@
+google-antigravity
+google-cloud-vertexai
+python-dotenv
+streamlit
+pydantic
+pandas
