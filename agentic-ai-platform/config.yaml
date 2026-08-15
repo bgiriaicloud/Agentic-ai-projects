@@ -1,0 +1,30 @@
+platform:
+  name: "Enterprise Agentic AI Platform"
+  version: "1.0.0"
+  execution_mode: "mock"
+
+models:
+  primary: "gemini-2.0-flash-001"
+  fallback: "gemini-1.5-pro"
+
+supervisor:
+  persona: "Master AI Architect & Systems Coordinator"
+  max_turns: 5
+  delegation_enabled: true
+
+worker_agents:
+  cloud_ops:
+    name: "CloudOps Subagent"
+    role: "GCP & Multi-Cloud Infrastructure Management"
+  finops_analytics:
+    name: "FinOps Subagent"
+    role: "Cloud Cost Optimization & BigQuery Analytics"
+
+mcp_servers:
+  gcp_mcp:
+    name: "GCP Infrastructure & Billing MCP Server"
+    transport: "stdio"
+
+evals:
+  grounding_threshold: 0.75
+  latency_target_ms: 1500

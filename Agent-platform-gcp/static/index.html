@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud Agent Platform - Build, Scale, Govern & Optimize</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Top Navigation Header -->
+        <header class="navbar">
+            <div class="brand">
+                <div class="brand-logo">
+                    <i class="fa-brands fa-google"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Google Cloud <span>Agent Platform</span></h1>
+                    <p class="subtitle">Build • Scale • Govern • Optimize Enterprise AI Agents</p>
+                </div>
+            </div>
+            <div class="nav-controls">
+                <div class="status-badge" id="mode-badge">
+                    <span class="status-dot"></span>
+                    <span id="mode-text">Mode: Mock Mode</span>
+                </div>
+                <button class="btn btn-secondary" id="btn-new-session">
+                    <i class="fa-solid fa-plus"></i> New GCP Session
+                </button>
+            </div>
+        </header>
+
+        <!-- 4 Pillars Banner -->
+        <div class="pillars-banner">
+            <div class="pillar-card">
+                <i class="fa-solid fa-cubes pillar-icon blue"></i>
+                <div>
+                    <div class="pillar-title">1. BUILD</div>
+                    <div class="pillar-desc">Reasoning Engine & Extensions</div>
+                </div>
+            </div>
+            <div class="pillar-card">
+                <i class="fa-solid fa-server pillar-icon green"></i>
+                <div>
+                    <div class="pillar-title">2. SCALE</div>
+                    <div class="pillar-desc">Serverless Session Runtime</div>
+                </div>
+            </div>
+            <div class="pillar-card">
+                <i class="fa-solid fa-shield-halved pillar-icon yellow"></i>
+                <div>
+                    <div class="pillar-title">3. GOVERN</div>
+                    <div class="pillar-desc">Grounding & Safety Audit</div>
+                </div>
+            </div>
+            <div class="pillar-card">
+                <i class="fa-solid fa-chart-line pillar-icon red"></i>
+                <div>
+                    <div class="pillar-title">4. OPTIMIZE</div>
+                    <div class="pillar-desc">Telemetry & Token Cost Calculator</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Workspace Grid -->
+        <main class="workspace-grid">
+            <!-- Left Column: Agent Console -->
+            <section class="panel control-panel">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-terminal"></i> GCP Agent Console</h2>
+                    <span class="session-id-tag" id="current-session-id">Session: Not Started</span>
+                </div>
+
+                <!-- Sample Presets -->
+                <div class="form-group">
+                    <label class="form-label"><i class="fa-solid fa-bolt"></i> Sample Presets</label>
+                    <div class="preset-pills">
+                        <button class="preset-btn" data-prompt="Run Vertex AI search for GKE Autopilot and query BigQuery costs">
+                            🚀 GKE Autopilot + BigQuery Spend
+                        </button>
+                        <button class="preset-btn" data-prompt="Search GCP IAM policy documentation and run python code calculation">
+                            🔐 GCP IAM Governance + Code Interpreter
+                        </button>
+                        <button class="preset-btn" data-prompt="Audit GCP BigQuery billing dataset for Committed Use Discounts (CUD)">
+                            📊 BigQuery CUD Optimization
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Prompt Input Box -->
+                <div class="form-group">
+                    <label class="form-label" for="prompt-input">Enterprise Instructions / Query</label>
+                    <textarea id="prompt-input" rows="4" placeholder="Enter instructions for GCP AI Agent..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button class="btn btn-primary" id="btn-submit">
+                    <i class="fa-solid fa-paper-plane"></i> Execute Agent Platform Cycle
+                </button>
+
+                <!-- Vertex Extensions List -->
+                <div class="extensions-container">
+                    <h3><i class="fa-solid fa-puzzle-piece"></i> Vertex AI Extensions</h3>
+                    <div id="extensions-list" class="extensions-list">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column: Agent Output & Governance Inspector -->
+            <section class="panel result-panel">
+                <!-- Metrics & Governance Bar -->
+                <div class="metrics-bar" id="metrics-bar">
+                    <div class="metric-item">
+                        <span class="metric-label">Latency</span>
+                        <span class="metric-value" id="val-latency">-- ms</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Grounding Confidence</span>
+                        <span class="metric-value highlight" id="val-grounding">-- %</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Safety Filter</span>
+                        <span class="metric-value status-pass" id="val-safety">PASSED</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Estimated Cost</span>
+                        <span class="metric-value" id="val-cost">$0.0000</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <div class="tab-header">
+                    <button class="tab-btn active" data-tab="tab-response">
+                        <i class="fa-solid fa-comment-dots"></i> Grounded Response
+                    </button>
+                    <button class="tab-btn" data-tab="tab-govern">
+                        <i class="fa-solid fa-shield-cat"></i> Governance Audit
+                    </button>
+                    <button class="tab-btn" data-tab="tab-extensions">
+                        <i class="fa-solid fa-plug"></i> Extensions Output
+                    </button>
+                    <button class="tab-btn" data-tab="tab-traces">
+                        <i class="fa-solid fa-wave-square"></i> Telemetry Traces
+                    </button>
+                </div>
+
+                <!-- Tab 1: Grounded Response -->
+                <div class="tab-content active" id="tab-response">
+                    <div id="response-container" class="empty-state">
+                        <i class="fa-solid fa-layer-group empty-icon"></i>
+                        <p>Submit a query to trigger GCP Agent Platform runtime.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Governance Audit -->
+                <div class="tab-content" id="tab-govern">
+                    <div id="govern-container" class="empty-state">
+                        <p>No governance audit available yet.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Extensions Output -->
+                <div class="tab-content" id="tab-extensions">
+                    <div id="extensions-output-container" class="empty-state">
+                        <p>No extensions output to display.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Telemetry Traces -->
+                <div class="tab-content" id="tab-traces">
+                    <div id="traces-container" class="logs-wrapper">
+                        <p class="empty-logs">Telemetry traces will appear here.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
