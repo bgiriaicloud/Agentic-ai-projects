@@ -1,7 +1,9 @@
 # GCP Agentic RAG Demo Platform
 ## Event-Driven Data Pipeline & Agentic RAG Architecture on Google Cloud
 
-![Google Cloud Event-Driven Agentic RAG Architecture](gcp_architecture_diagram.svg)
+![Google Cloud Event-Driven Agentic RAG Reference Architecture](gcp_event_driven_rag_architecture.png)
+
+![Google Cloud Event-Driven Agentic RAG Vector Diagram](gcp_architecture_diagram.svg)
 
 * 📄 [**`gcp_architecture_diagram.md`**](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/gcp_agentic_rag_demo/gcp_architecture_diagram.md): Dedicated Architecture Blueprint with Mermaid & ASCII flowcharts.
 

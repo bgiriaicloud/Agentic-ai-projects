@@ -1,5 +1,7 @@
 # Google Cloud Event-Driven Agentic RAG Architecture Diagram
 
+![Google Cloud Event-Driven Agentic RAG Reference Architecture](gcp_event_driven_rag_architecture.png)
+
 This document contains the complete **Architecture Blueprint & Diagram** for the **Event-Driven Data Pipeline with Agentic RAG on GCP** (`gcp_agentic_rag_demo`).
 
 ---
