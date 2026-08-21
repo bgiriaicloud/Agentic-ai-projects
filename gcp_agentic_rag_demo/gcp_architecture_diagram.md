@@ -1,11 +1,10 @@
-# GCP Agentic RAG Demo Platform
-## Event-Driven Data Pipeline & Agentic RAG Architecture on Google Cloud
+# Google Cloud Event-Driven Agentic RAG Architecture Diagram
 
-![Google Cloud Event-Driven Agentic RAG Architecture](gcp_architecture_diagram.svg)
+This document contains the complete **Architecture Blueprint & Diagram** for the **Event-Driven Data Pipeline with Agentic RAG on GCP** (`gcp_agentic_rag_demo`).
 
-* 📄 [**`gcp_architecture_diagram.md`**](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/gcp_agentic_rag_demo/gcp_architecture_diagram.md): Dedicated Architecture Blueprint with Mermaid & ASCII flowcharts.
+---
 
-This repository provides a working, production-grade **GCP Agentic RAG Application** built according to Google Cloud Event-Driven Agentic RAG Reference Architecture guidelines.
+## 🎨 1. Mermaid Architecture Flowchart
 
 ```mermaid
 flowchart TD
@@ -43,106 +42,96 @@ flowchart TD
         UI["Glassmorphic Web App UI / Chatbot"]
     end
 
+    %% Flow Connections
     DS1 -->|MySQL Binlog| PS
     DS2 -->|Kafka Event| PS
     DS3 -->|GCS Create Event| PS
+
     PS -->|Stream Ingestion| DF
     DF -->|Raw Storage| GCS
     DF -->|Warehouse Load| BQ
     DF -->|Vector Embeddings| EMB
     EMB -->|HNSW Index Upsert| VS
+
     GCS --> BQ
     VS <-->|Sub-50ms Vector Search| AB
     LLM <--> AB
+
     UI <-->|HTTP REST Queries| API
     API <-->|Orchestration| AB
 ```
 
 ---
 
-## 🏗️ Google Cloud Architecture Overview
+## 📋 2. High-Precision ASCII Architecture Diagram
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                   ENTERPRISE DATA SOURCES                                         │
+│                                1. DATA SOURCE ANY (ON-PREM / MULTI-CLOUD / GCP)                   │
 │   ┌───────────────────────────┐   ┌───────────────────────────┐   ┌────────────────────────────┐  │
-│   │    On-Premise Databases   │   │  Multi-Cloud Object Store │   │  GCP Cloud Storage (GCS)   │  │
+│   │   On-Premise Databases    │   │ Multi-Cloud Storage (S3)  │   │  GCP Cloud Storage (GCS)   │  │
 │   └─────────────┬─────────────┘   └─────────────┬─────────────┘   └─────────────┬──────────────┘  │
 └─────────────────┼───────────────────────────────┼───────────────────────────────┼─────────────────┘
-                  │                               │                               │
+                  │ (MySQL Binlog)                │ (Kafka Event)                 │ (GCS Create Event)
                   ▼                               ▼                               ▼
 ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                               EVENT INGESTION & MESSAGING LAYER                                   │
+│                                2. EVENT INGESTION / MESSAGING LAYER                               │
 │  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  Google Cloud Pub/Sub (Real-Time Change Event Ingestion)                                    │  │
+│  │  Google Cloud Pub/Sub (Real-Time Change Event Messages)                                     │  │
 │  └───────────────────────────────────────────┬─────────────────────────────────────────────────┘  │
 └──────────────────────────────────────────────┼────────────────────────────────────────────────────┘
                                                │
                                                ▼
 ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                             STREAM PROCESSING & ETL PIPELINE                                      │
+│                               3. STREAM PROCESSING / ETL PIPELINE                                 │
 │  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  Google Cloud Dataflow (Apache Beam) -> Vertex AI Text Embeddings (768/3072 dims)           │  │
-│  └───────────────────┬───────────────────────────────────────────────┬─────────────────────────┘  │
-└──────────────────────┼───────────────────────────────────────────────┼────────────────────────────┘
-                       │                                               │
-                       ▼                                               ▼
-┌──────────────────────────────────────────────┐     ┌──────────────────────────────────────────────┐
-│           VERTEX AI VECTOR SEARCH            │     │         BIGQUERY DATA WAREHOUSE              │
-│        (HNSW Matching Engine Index)          │     │        (Raw & Structured Data Lake)          │
-└──────────────────────┬───────────────────────┘     └──────────────────────────────────────────────┘
-                       │                                               ▲
-                       ▼                                               │
-┌──────────────────────────────────────────────────────────────────────┴────────────────────────────┐
-│                              AGENTIC RAG ORCHESTRATION LAYER                                      │
+│  │  Google Cloud Dataflow (Apache Beam Streaming Pipeline)                                     │  │
+│  └───────────────────┬───────────────────────────────┬───────────────────────────────┬─────────┘  │
+└──────────────────────┼───────────────────────────────┼───────────────────────────────┼────────────┘
+                       │                               │                               │
+                       ▼                               ▼                               ▼
+┌──────────────────────────────┐    ┌──────────────────────────────┐    ┌───────────────────────────┐
+│ Google Cloud Storage (GCS)   │    │ BigQuery Data Warehouse      │    │ Vertex AI Text Embeddings │
+│ (Raw & Structured Data Lake) │───>│ (Analytical & SQL Storage)   │    │ (text-embedding-004)      │
+└──────────────────────────────┘    └──────────────────────────────┘    └─────────────┬─────────────┘
+                                                                                      │
+                                                                                      ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                5. KNOWLEDGE BASE / VECTOR INDEX                                   │
 │  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  Vertex AI Agent Builder + Gemini 2.0 Flash/Pro LLM Reasoning & Tool Orchestration           │  │
+│  │  Vertex AI Vector Search (Matching Engine HNSW Index)                                       │  │
+│  └───────────────────────────────────────────┬─────────────────────────────────────────────────┘  │
+└──────────────────────────────────────────────┼────────────────────────────────────────────────────┘
+                                               │ (Sub-50ms Vector Search)
+                                               ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                6. AGENTIC RAG PIPELINE (VERTEX AI)                                │
+│  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐  │
+│  │  Vertex AI Agent Builder + Gemini 2.0 Flash / Pro LLM (Orchestration, Tools, Reasoning)    │  │
 │  └───────────────────────────────────────────┬─────────────────────────────────────────────────┘  │
 └──────────────────────────────────────────────┼────────────────────────────────────────────────────┘
                                                │
                                                ▼
 ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                            END-USER APPLICATION & WEB DASHBOARD                                   │
+│                                7. USER INTERFACE & END-USER APPLICATION                           │
 │  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  FastAPI Application Server (Port 8004) + Glassmorphic Interactive Dashboard                │  │
+│  │  FastAPI Server (Port 8004) + Glassmorphic Interactive Web App UI                           │  │
 │  └─────────────────────────────────────────────────────────────────────────────────────────────┘  │
 └───────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## ⚡ Quick Start & Execution
+## 🛠️ 3. Component Specification Directory
 
-### 1. Run Automated Unit Tests
-```bash
-python3 test_rag.py
-```
-
-### 2. Launch FastAPI Server Locally
-```bash
-python3 app.py
-```
-* **Dashboard URL**: `http://localhost:8004`
-* **Health Check**: `http://localhost:8004/api/healthz`
-
----
-
-## 🔌 API Endpoints Reference
-
-### 1. `POST /api/rag/query`
-Executes multi-query reasoning and grounded answer synthesis.
-```json
-{
-  "query": "How does Pub/Sub streaming connect to BigQuery and Vertex AI Vector Search?"
-}
-```
-
-### 2. `POST /api/rag/ingest`
-Simulates real-time Pub/Sub event ingestion and Dataflow processing.
-```json
-{
-  "file_name": "dataflow_streaming_pipeline.pdf",
-  "source": "Cloud Storage (GCS)",
-  "content": "Dataflow streams Pub/Sub records into BigQuery and updates Vertex AI Vector Search."
-}
-```
+| Component | GCP Service | Architecture Role |
+| :--- | :--- | :--- |
+| **Data Sources** | On-Prem / AWS / GCP | Generates raw documents, SQL database change logs, and object updates. |
+| **Event Messaging** | Google Cloud Pub/Sub | Captures real-time change events asynchronously with zero data loss. |
+| **Stream Processing** | Cloud Dataflow (Apache Beam) | Executes streaming ETL, text extraction, chunking, and embedding dispatch. |
+| **Data Lake** | Google Cloud Storage (GCS) | Immutable raw landing bucket for uploaded document objects. |
+| **Data Warehouse** | BigQuery | Analytical warehouse storing structured records alongside vector metadata. |
+| **Embedding Model** | Vertex AI Text Embeddings | Generates 768/3072-dimensional normalized vector representations. |
+| **Vector Store** | Vertex AI Vector Search | High-throughput HNSW index executing similarity queries in $<50\text{ms}$. |
+| **Agentic LLM** | Vertex AI Agent Builder + Gemini 2.0 | Executes multi-query planning, function calling tools, and grounded synthesis. |
+| **Web Server & UI** | FastAPI (Port 8004) + Web UI | Interactive user application delivering chat interfaces and verified citations. |

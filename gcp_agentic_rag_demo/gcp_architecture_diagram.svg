@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <!-- Node Gradients -->
+    <linearGradient id="gcpBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285f4" />
+      <stop offset="100%" stop-color="#1a73e8" />
+    </linearGradient>
+    <linearGradient id="gcpRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea4335" />
+      <stop offset="100%" stop-color="#d93025" />
+    </linearGradient>
+    <linearGradient id="gcpYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbc05" />
+      <stop offset="100%" stop-color="#f9ab00" />
+    </linearGradient>
+    <linearGradient id="gcpGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34a853" />
+      <stop offset="100%" stop-color="#1e8e3e" />
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.8)" />
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.9)" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Canvas Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+
+  <!-- Title Header -->
+  <text x="600" y="45" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+    EVENT-DRIVEN DATA PIPELINE WITH AGENTIC RAG ON GCP
+  </text>
+  <text x="600" y="70" font-family="'Inter', system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">
+    Google Cloud Reference Architecture: Pub/Sub → Dataflow → GCS &amp; BigQuery → Vertex AI Vector Search &amp; Gemini 2.0
+  </text>
+
+  <!-- 1. DATA SOURCES CONTAINER -->
+  <g transform="translate(40, 100)">
+    <rect width="200" height="520" rx="16" fill="url(#cardBg)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+    <text x="100" y="32" font-family="sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">DATA SOURCE (ANY)</text>
+    <text x="100" y="50" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">On-Prem / Multi-Cloud / GCP</text>
+
+    <!-- Source Nodes -->
+    <rect x="20" y="75" width="160" height="110" rx="10" fill="#1e293b" stroke="#4285f4" stroke-width="1.5" />
+    <text x="100" y="115" font-family="sans-serif" font-size="13" font-weight="600" fill="#4285f4" text-anchor="middle">On-Prem Databases</text>
+    <text x="100" y="140" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">MySQL / Oracle Binlog</text>
+
+    <rect x="20" y="210" width="160" height="110" rx="10" fill="#1e293b" stroke="#ea4335" stroke-width="1.5" />
+    <text x="100" y="250" font-family="sans-serif" font-size="13" font-weight="600" fill="#ea4335" text-anchor="middle">Multi-Cloud Storage</text>
+    <text x="100" y="275" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">AWS S3 / Azure Blob</text>
+
+    <rect x="20" y="345" width="160" height="145" rx="10" fill="#1e293b" stroke="#34a853" stroke-width="1.5" />
+    <text x="100" y="385" font-family="sans-serif" font-size="13" font-weight="600" fill="#34a853" text-anchor="middle">Cloud Storage (GCS)</text>
+    <text x="100" y="410" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Raw Documents &amp; Files</text>
+    <text x="100" y="440" font-family="sans-serif" font-size="10" fill="#fbbc05" text-anchor="middle">(.pdf, .docx, .md)</text>
+  </g>
+
+  <!-- 2. INGESTION & MESSAGING (PUB/SUB) -->
+  <g transform="translate(280, 230)">
+    <rect width="170" height="260" rx="14" fill="url(#cardBg)" stroke="#4285f4" stroke-width="2" filter="url(#glowBlue)" />
+    <text x="85" y="35" font-family="sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">EVENT INGESTION</text>
+    
+    <circle cx="85" cy="110" r="40" fill="url(#gcpBlue)" />
+    <text x="85" y="115" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Pub/Sub</text>
+
+    <text x="85" y="180" font-family="sans-serif" font-size="12" font-weight="600" fill="#4285f4" text-anchor="middle">Google Cloud Pub/Sub</text>
+    <text x="85" y="205" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Real-Time Event Streams</text>
+    <text x="85" y="225" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Sub-second Latency</text>
+  </g>
+
+  <!-- 3. STREAM PROCESSING (DATAFLOW) -->
+  <g transform="translate(490, 230)">
+    <rect width="170" height="260" rx="14" fill="url(#cardBg)" stroke="#fbbc05" stroke-width="2" />
+    <text x="85" y="35" font-family="sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">STREAMING ETL</text>
+
+    <rect x="45" y="70" width="80" height="80" rx="12" fill="url(#gcpYellow)" />
+    <text x="85" y="115" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Dataflow</text>
+
+    <text x="85" y="180" font-family="sans-serif" font-size="12" font-weight="600" fill="#fbbc05" text-anchor="middle">Cloud Dataflow</text>
+    <text x="85" y="205" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Apache Beam Processing</text>
+    <text x="85" y="225" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Text Extraction &amp; Chunking</text>
+  </g>
+
+  <!-- 4. DATA LAKE & WAREHOUSE (BIGQUERY / GCS) -->
+  <g transform="translate(700, 100)">
+    <rect width="210" height="200" rx="14" fill="url(#cardBg)" stroke="#34a853" stroke-width="1.5" />
+    <text x="105" y="30" font-family="sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">DATA LAKE &amp; WAREHOUSE</text>
+    
+    <rect x="20" y="55" width="170" height="60" rx="8" fill="#1e293b" stroke="#34a853" stroke-width="1" />
+    <text x="105" y="80" font-family="sans-serif" font-size="12" font-weight="600" fill="#34a853" text-anchor="middle">Google Cloud Storage</text>
+    <text x="105" y="100" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Raw Object Data Lake</text>
+
+    <rect x="20" y="125" width="170" height="60" rx="8" fill="#1e293b" stroke="#4285f4" stroke-width="1" />
+    <text x="105" y="150" font-family="sans-serif" font-size="12" font-weight="600" fill="#4285f4" text-anchor="middle">BigQuery Analytics</text>
+    <text x="105" y="170" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Data Warehouse &amp; SQL</text>
+  </g>
+
+  <!-- 5. VECTOR SEARCH & VERTEX AI AGENT BUILDER -->
+  <g transform="translate(700, 320)">
+    <rect width="210" height="300" rx="14" fill="url(#cardBg)" stroke="#34a853" stroke-width="2" filter="url(#glowGreen)" />
+    <text x="105" y="30" font-family="sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">AGENTIC RAG PIPELINE</text>
+
+    <!-- Vector Search Store -->
+    <rect x="20" y="55" width="170" height="85" rx="8" fill="#1e293b" stroke="#34a853" stroke-width="1.5" />
+    <text x="105" y="85" font-family="sans-serif" font-size="12" font-weight="600" fill="#34a853" text-anchor="middle">Vertex AI Vector Search</text>
+    <text x="105" y="105" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Matching Engine (HNSW)</text>
+    <text x="105" y="123" font-family="sans-serif" font-size="10" fill="#34a853" text-anchor="middle">Sub-50ms Vector Retrieval</text>
+
+    <!-- Gemini & Agent Builder -->
+    <rect x="20" y="155" width="170" height="120" rx="8" fill="#1e293b" stroke="#4285f4" stroke-width="1.5" />
+    <text x="105" y="185" font-family="sans-serif" font-size="12" font-weight="600" fill="#4285f4" text-anchor="middle">Vertex AI Agent Builder</text>
+    <text x="105" y="210" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ea4335" text-anchor="middle">Gemini 2.0 Flash / Pro</text>
+    <text x="105" y="235" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Multi-Query Planning &amp;</text>
+    <text x="105" y="253" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Grounded Synthesis</text>
+  </g>
+
+  <!-- 6. USER INTERFACE & END-USER APP -->
+  <g transform="translate(950, 230)">
+    <rect width="210" height="260" rx="14" fill="url(#cardBg)" stroke="#4285f4" stroke-width="2" />
+    <text x="105" y="35" font-family="sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">USER APPLICATION</text>
+
+    <rect x="20" y="70" width="170" height="160" rx="10" fill="#0f172a" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <text x="105" y="105" font-family="sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">FastAPI Server</text>
+    <text x="105" y="125" font-family="sans-serif" font-size="11" fill="#4285f4" text-anchor="middle">Port 8004</text>
+
+    <rect x="35" y="145" width="140" height="65" rx="6" fill="#1e293b" stroke="#34a853" stroke-width="1" />
+    <text x="105" y="170" font-family="sans-serif" font-size="11" font-weight="600" fill="#34a853" text-anchor="middle">Glassmorphic Web UI</text>
+    <text x="105" y="192" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Grounded Answers &amp; Citations</text>
+  </g>
+
+  <!-- CONNECTING FLOW ARROWS -->
+  <g stroke="#4285f4" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <!-- Data Sources -> Pub/Sub -->
+    <path d="M 240 360 L 280 360" />
+    <!-- Pub/Sub -> Dataflow -->
+    <path d="M 450 360 L 490 360" stroke="#fbbc05" />
+    <!-- Dataflow -> GCS/BigQuery -->
+    <path d="M 575 230 L 575 200 L 700 200" stroke="#34a853" />
+    <!-- Dataflow -> Vector Search -->
+    <path d="M 575 490 L 575 470 L 700 470" stroke="#34a853" />
+    <!-- Vector Search <-> Agent Builder -->
+    <path d="M 805 405 L 805 475" stroke="#4285f4" />
+    <!-- Agent Builder -> App UI -->
+    <path d="M 910 360 L 950 360" stroke="#34a853" />
+  </g>
+
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4285f4" />
+    </marker>
+  </defs>
+</svg>

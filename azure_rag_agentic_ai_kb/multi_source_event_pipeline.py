@@ -2,6 +2,21 @@
 ===============================================================================
 MULTI-SOURCE AUTOMATED EVENT PIPELINE (SharePoint, Azure DevOps, GitHub)
 ===============================================================================
+Architecture Flow:
+[SharePoint / ADO / GitHub Webhooks]
+        │
+        ▼
+[Azure App Service Webhook Receiver (<100ms ACK)]
+        │
+        ▼
+[Azure Service Bus Queue & DLQ] ──> [Azure Functions Async Worker]
+        │
+        ▼
+[Azure AI Doc Intelligence + GPT-4o Vision OCR]
+        │
+        ▼
+[Azure AI Search (HNSW + BM25 + L2 Ranker)] & [Azure Cosmos DB (State & Memory)]
+
 Demonstrates real-time event dispatcher processing webhooks from:
 1. SharePoint Online (Microsoft Graph API Webhooks)
 2. Azure DevOps (Service Hooks git.push / wiki.updated)

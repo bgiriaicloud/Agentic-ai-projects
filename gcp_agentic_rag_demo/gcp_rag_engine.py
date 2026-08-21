@@ -2,6 +2,18 @@
 ===============================================================================
 GCP AGENTIC RAG ENGINE SDK
 ===============================================================================
+Google Cloud Architecture Reference:
+[Data Source: On-Prem / Multi-Cloud / GCP]
+        │ Change Events
+        ▼
+[Google Cloud Pub/Sub] ──> [Cloud Dataflow (Stream / ETL)]
+        │                                 │
+        ▼                                 ▼
+[Google Cloud Storage / BigQuery]   [Vertex AI Text Embeddings]
+                                          │
+                                          ▼
+[Vertex AI Agent Builder / Gemini 2.0] <──> [Vertex AI Vector Search (HNSW)]
+
 Implements the Event-Driven Data Pipeline with Agentic RAG on GCP:
 1. Event Ingestion: Cloud Pub/Sub & GCS Landing Simulation
 2. Data Processing: Dataflow & Vertex AI Text Embeddings (768/3072 dims)
