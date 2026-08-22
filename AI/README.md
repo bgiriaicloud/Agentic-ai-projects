@@ -1,5 +1,7 @@
 # Artificial Intelligence (AI) Master Study & Reference Guide
 
+![Enterprise Agentic RAG & MCP Architecture](nano_banana_agentic_rag_mcp_architecture.png)
+
 ![AI 360-Degree Circular Study Roadmap](ai_circular_roadmap_diagram.png)
 
 ![Hierarchy of Artificial Intelligence (Concentric & Pyramid Visual Diagram)](ai_hierarchy_pyramid_diagram.png)
