@@ -7,6 +7,7 @@ google-cloud-pubsub>=2.27.0
 google-cloud-dlp>=3.20.0
 google-cloud-firestore>=2.19.0
 google-cloud-storage>=2.18.2
+google-cloud-secret-manager>=2.20.0
 
 # Web Framework & API Server
 fastapi>=0.115.0

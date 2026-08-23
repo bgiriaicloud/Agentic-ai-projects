@@ -89,6 +89,17 @@ class TestHealthcareMultiAgent(unittest.TestCase):
         self.assertEqual(len(res.execution_trace), 4)
         self.assertLess(res.total_latency_seconds, 1.0)
 
+    def test_07_gcp_secret_manager_retrieval(self):
+        """Verifies that secrets are retrieved via GCPSecretManager."""
+        from secret_manager import GCPSecretManager
+        gemini_key = GCPSecretManager.get_gemini_api_key()
+        payer_key = GCPSecretManager.get_payer_api_gateway_key()
+        fhir_token = GCPSecretManager.get_fhir_auth_token()
+        
+        self.assertIsNotNone(gemini_key)
+        self.assertIsNotNone(payer_key)
+        self.assertIsNotNone(fhir_token)
+
 
 if __name__ == "__main__":
     unittest.main()

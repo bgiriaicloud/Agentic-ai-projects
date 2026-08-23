@@ -39,6 +39,7 @@ def health_check():
         "port": 8005,
         "framework": "Google ADK 2.4",
         "platform": "Gemini Agent Platform (Vertex AI Agent Builder)",
+        "secret_manager": "GCP Secret Manager (Encrypted at Rest)",
         "hipaa_shield": "ACTIVE",
         "fhir_store": "CONNECTED"
     }

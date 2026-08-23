@@ -110,10 +110,38 @@ resource "google_artifact_registry_repository" "hcare_repo" {
   format        = "DOCKER"
 }
 
-# 4. Service Account & IAM Roles
+# 4. Secret Manager Secrets (HIPAA Security Rule Zero Hardcoded Secrets)
+resource "google_secret_manager_secret" "gemini_api_key" {
+  secret_id = "gemini-api-key"
+  replication {
+    automatic = true
+  }
+}
+
+resource "google_secret_manager_secret" "payer_key" {
+  secret_id = "payer-api-gateway-key"
+  replication {
+    automatic = true
+  }
+}
+
+resource "google_secret_manager_secret" "fhir_token" {
+  secret_id = "fhir-auth-token"
+  replication {
+    automatic = true
+  }
+}
+
+# 5. Service Account & IAM Roles (Least Privilege)
 resource "google_service_account" "agent_sa" {
   account_id   = "hcare-agent-runner"
   display_name = "Healthcare Multi-Agent Cloud Run Service Account"
+}
+
+resource "google_project_iam_member" "secret_accessor" {
+  project = var.project_id
+  role    = "roles/secretmanager.secretAccessor"
+  member  = "serviceAccount:${google_service_account.agent_sa.email}"
 }
 
 resource "google_project_iam_member" "healthcare_user" {
