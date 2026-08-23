@@ -1,0 +1,16 @@
+# Google Cloud AI & Healthcare Multi-Agent Dependencies
+google-cloud-aiplatform>=1.71.0
+google-genai>=0.1.1
+google-cloud-healthcare>=1.11.0
+google-cloud-bigquery>=3.26.0
+google-cloud-pubsub>=2.27.0
+google-cloud-dlp>=3.20.0
+google-cloud-firestore>=2.19.0
+google-cloud-storage>=2.18.2
+
+# Web Framework & API Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.10.0
+python-dotenv>=1.0.1
+requests>=2.32.3
