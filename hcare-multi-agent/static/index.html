@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Multi-Agent Platform - GCP Production Console</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="navbar">
+            <div class="logo">
+                <span class="cross">✚</span> Google Cloud Healthcare <span class="badge">Multi-Agent AI Platform</span>
+            </div>
+            <div class="status-pill">
+                <span class="dot green"></span> HIPAA Shield Active • Port 8005
+            </div>
+        </header>
+
+        <!-- Multi-Agent Hierarchy Header -->
+        <div class="hierarchy-strip">
+            <div class="tier">Tier 1: Cloud Healthcare API (FHIR R4)</div>
+            <div class="tier">Tier 2: Meta-Agents (ADK Skills & HIPAA)</div>
+            <div class="tier active">Tier 3: Gemini Agent Platform (Hospital AI Assistant)</div>
+            <div class="tier">Tier 4: 7 Domain Specialist Agents (ADK Agents)</div>
+        </div>
+
+        <!-- Main Layout -->
+        <main class="grid-layout">
+            <!-- Left Column: Query Console -->
+            <section class="card shadow-lg">
+                <h2>🩺 Hospital Multi-Agent Dispatch Console</h2>
+                <p class="subtitle">Select your persona, ask clinical/administrative queries, and observe multi-agent orchestration.</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Patient ID</label>
+                        <input type="text" id="patientIdInput" value="P-98421">
+                    </div>
+                    <div class="form-group">
+                        <label>User Role Persona</label>
+                        <select id="userRoleSelect">
+                            <option value="Patient">Patient</option>
+                            <option value="Doctor">Doctor / Physician</option>
+                            <option value="Nurse">Nursing Staff</option>
+                            <option value="Admin">Hospital Administrator</option>
+                            <option value="Insurance">Insurance Specialist</option>
+                            <option value="IT">IT Systems Admin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Query Input</label>
+                    <textarea id="queryInput" rows="3" placeholder="Enter clinical inquiry...">What are my latest blood test and HbA1c glucose lab results?</textarea>
+                </div>
+
+                <button id="dispatchBtn" class="btn btn-primary">Dispatch Multi-Agent Workflow</button>
+
+                <div id="loading" class="loading-spinner hidden">
+                    <div class="spinner"></div>
+                    <span>Orchestrating Meta-Agents, Cloud DLP De-identification & Domain Specialist...</span>
+                </div>
+
+                <!-- Response Box -->
+                <div id="responseContainer" class="response-box hidden">
+                    <div class="response-header">
+                        <span id="agentBadge" class="agent-badge">Agent: Lab Test Agent</span>
+                        <span id="hipaaBadge" class="hipaa-badge">🔒 HIPAA Verified</span>
+                    </div>
+
+                    <div class="section-title">💡 Final Agent Response</div>
+                    <div id="answerText" class="answer-content"></div>
+
+                    <div class="section-title">🧠 Meta-Agent Clinical Reasoning</div>
+                    <div id="clinicalReasoningText" class="reasoning-content"></div>
+
+                    <!-- Redactions if any -->
+                    <div id="redactionsBox" class="redaction-tag hidden"></div>
+                </div>
+            </section>
+
+            <!-- Right Column: Live Agent Execution Trace -->
+            <section class="card shadow-lg">
+                <h2>⚡ Live Agent-to-Agent (A2A) Trace</h2>
+                <p class="subtitle">Real-time audit log of multi-agent cognitive steps & tool calls.</p>
+
+                <div id="traceContainer" class="trace-box">
+                    <div class="trace-empty">No active query dispatched yet. Click 'Dispatch Multi-Agent Workflow' to view live orchestration steps.</div>
+                </div>
+
+                <div id="fhirBox" class="fhir-box hidden">
+                    <div class="section-title">📊 FHIR Observation Resource Bundle</div>
+                    <pre id="fhirContent"></pre>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

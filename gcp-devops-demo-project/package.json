@@ -1,0 +1,21 @@
+{
+  "name": "gcp-devops-demo-project",
+  "version": "1.0.0",
+  "description": "Sample DevOps Node.js project demonstrating Google Cloud Run hosting, Terraform IaC, and CI/CD pipelines.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "private": true
+}

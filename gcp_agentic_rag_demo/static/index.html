@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP Agentic RAG Platform - Event-Driven Architecture</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="navbar">
+            <div class="logo">
+                <span class="gcp-blue">G</span><span class="gcp-red">o</span><span class="gcp-yellow">o</span><span class="gcp-blue">g</span><span class="gcp-green">l</span><span class="gcp-red">e</span> Cloud Platform
+                <span class="badge">Agentic RAG Engine</span>
+            </div>
+            <div class="status-pill">
+                <span class="dot green"></span> Live Server (Port 8004)
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="grid-layout">
+            <!-- Left Column: Search & Reasoning -->
+            <section class="card shadow-lg">
+                <h2>🔍 Agentic RAG Query Console</h2>
+                <p class="subtitle">Powered by Pub/Sub, Dataflow, Vertex AI Vector Search & Gemini 2.0</p>
+
+                <div class="input-group">
+                    <input type="text" id="queryInput" placeholder="Ask a question (e.g., How does Pub/Sub streaming connect to BigQuery and Vertex AI?)" value="How does Pub/Sub streaming connect to BigQuery and Vertex AI Vector Search?">
+                    <button id="searchBtn" class="btn btn-gcp">Run RAG Pipeline</button>
+                </div>
+
+                <div id="loading" class="loading-spinner hidden">
+                    <div class="spinner"></div>
+                    <span>Orchestrating Gemini 2.0 Reasoning & Sub-50ms Vector Search...</span>
+                </div>
+
+                <!-- Reasoning Steps -->
+                <div id="reasoningContainer" class="reasoning-box hidden">
+                    <h3>🧠 Vertex AI Agent Builder Reasoning Steps</h3>
+                    <ul id="reasoningList"></ul>
+                </div>
+
+                <!-- Grounded Response -->
+                <div id="responseContainer" class="response-box hidden">
+                    <h3>💡 Grounded Synthesis & Citation Output</h3>
+                    <div id="answerText" class="answer-content"></div>
+                    <div class="citations-box">
+                        <strong>Verified Citations:</strong>
+                        <ul id="citationList"></ul>
+                    </div>
+                    <div id="latencyBadge" class="latency-tag"></div>
+                </div>
+            </section>
+
+            <!-- Right Column: Event Ingestion Simulator -->
+            <section class="card shadow-lg">
+                <h2>⚡ Pub/Sub Real-Time Event Ingestion</h2>
+                <p class="subtitle">Simulate file creation events in Cloud Storage (GCS)</p>
+
+                <div class="form-group">
+                    <label>File Name</label>
+                    <input type="text" id="fileNameInput" placeholder="architecture_spec.pdf" value="cloud_dataflow_pipeline.pdf">
+                </div>
+
+                <div class="form-group">
+                    <label>Content Payload</label>
+                    <textarea id="fileContentInput" rows="4" placeholder="Enter document text content...">Dataflow processes high-throughput streaming Pub/Sub messages and generates 768-dim embeddings via Vertex AI for vector indexing.</textarea>
+                </div>
+
+                <button id="ingestBtn" class="btn btn-secondary">Simulate Pub/Sub & Dataflow Ingest</button>
+
+                <div id="ingestResult" class="ingest-status hidden"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

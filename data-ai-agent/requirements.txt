@@ -1,0 +1,7 @@
+google-antigravity
+google-cloud-bigquery
+google-cloud-vertexai
+streamlit
+pandas
+python-dotenv
+pydantic
