@@ -281,3 +281,48 @@ flowchart TD
    - **Vertex AI Gen AI Evaluation Service (`vertexai.preview.evaluation`):** Automated evaluation pipelines computing *Groundedness*, *Instruction Following*, and *Trajectory Pass@k*.
 
 👉 See the complete runnable demo code in the [`gcp_harness_demo/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/gcp_harness_demo) directory.
+
+---
+
+## 7. 🟧 Enterprise Case Study: Amazon Web Services (AWS) Harness Engineering with AgentCore
+
+AWS provides a specialized enterprise production harness built on **Amazon Bedrock**, **Bedrock AgentCore Engine**, **Bedrock Guardrails**, **AWS Lambda Firecracker MicroVMs**, and **CloudWatch/X-Ray**:
+
+```mermaid
+flowchart TD
+    User([User Prompt / Intent]) --> InGuard["Amazon Bedrock Guardrails<br/>(Prompt Attack & Content Filters)"]
+    
+    subgraph AWS_Harness["AWS AgentCore Production Harness"]
+        InGuard --> Controller["CloudWatch Metrics & Circuit Breakers<br/>(Token Ceilings, Max Loops, Timeout)"]
+        
+        subgraph Core["Agent & Execution Layer"]
+            Controller --> Agent["Amazon Bedrock AgentCore<br/>(Claude 3.5 Sonnet / Amazon Nova)"]
+            Agent <--> Sandbox["AWS Lambda Firecracker MicroVM<br/>(Sandboxed Action Groups & Python Runtime)"]
+        end
+        
+        Core --> OutGuard["Contextual Grounding & Sensitive Info Masking<br/>(PII & AWS Key Redaction)"]
+        OutGuard --> Telemetry["AWS CloudWatch & AWS X-Ray<br/>(OpenTelemetry Trajectory Segments)"]
+    end
+    
+    Telemetry --> EvalHarness["Amazon Bedrock Model Evaluation<br/>(Relevance, Groundedness, Action Efficiency)"]
+    OutGuard --> Output([Verified Safe Output & CloudWatch Report])
+```
+
+### AWS Harness Tech Stack
+
+1. **Safety & Guardrails:**
+   - **Amazon Bedrock Guardrails:** Prompt Attack Filter (direct injection & jailbreak defense), Content & Denied Topic Filters.
+   - **Sensitive Information Filters:** Real-time masking of SSNs, credit cards, and AWS Access Keys.
+   - **Contextual Grounding Check:** Validates factual claims against Amazon Bedrock Knowledge Bases (OpenSearch Serverless).
+2. **Execution & Sandboxing:**
+   - **AWS Lambda with Firecracker MicroVM Isolation:** KVM-based isolated action group execution preventing host kernel tampering.
+   - **AWS IAM Least Privilege:** Tight IAM execution role boundaries for DynamoDB and S3 data access.
+3. **Control & Circuit Breakers:**
+   - **Bedrock Token Budget Ledger:** CloudWatch metric alarms for session token ceilings.
+   - **Max Step / ReAct Limiter & Action Error Halter:** Immediate halt upon recursive looping or repeated tool exceptions.
+4. **Distributed Observability:**
+   - **AWS CloudWatch & AWS X-Ray:** OpenTelemetry distributed segments across reasoning traces, Action Groups, and guardrails.
+5. **Continuous Evaluation:**
+   - **Amazon Bedrock Automated Model Evaluation:** Evaluates Intent Relevance, Groundedness, and Action Group Pass@k efficiency.
+
+👉 See the complete runnable demo code in the [`aws_harness_demo/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/aws_harness_demo) directory.

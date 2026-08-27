@@ -1,0 +1,357 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradAWS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c14" />
+      <stop offset="50%" stop-color="#0f1926" />
+      <stop offset="100%" stop-color="#05080e" />
+    </linearGradient>
+    
+    <linearGradient id="cardBgAWS" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142136" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b1320" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Stage Gradients -->
+    <linearGradient id="gAWS1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9900" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="gAWS2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="gAWS3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+    <linearGradient id="gAWS4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#be185d" />
+    </linearGradient>
+    <linearGradient id="gAWS5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 800; fill: #ffffff; letter-spacing: 1.5px; }
+    .subtitle { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 600; fill: #ff9900; font-size: 13px; letter-spacing: 1px; }
+    .stage-tag { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1.2px; }
+    .stage-title { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 18px; fill: #ffffff; }
+    .stage-sub { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 500; font-size: 12px; fill: #94a3b8; }
+    .item-title { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 14px; fill: #f8fafc; }
+    .item-desc { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 400; font-size: 11.5px; fill: #94a3b8; }
+    .badge-txt { font-family: 'Amazon Ember', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 11px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradAWS)" />
+
+  <!-- Ambient Grid -->
+  <g opacity="0.04" stroke="#ff9900" stroke-width="1">
+    <line x1="0" y1="120" x2="1920" y2="120" /><line x1="0" y1="240" x2="1920" y2="240" />
+    <line x1="0" y1="360" x2="1920" y2="360" /><line x1="0" y1="480" x2="1920" y2="480" />
+    <line x1="0" y1="600" x2="1920" y2="600" /><line x1="0" y1="720" x2="1920" y2="720" />
+    <line x1="0" y1="840" x2="1920" y2="840" /><line x1="0" y1="960" x2="1920" y2="960" />
+    <line x1="200" y1="0" x2="200" y2="1080" /><line x1="400" y1="0" x2="400" y2="1080" />
+    <line x1="600" y1="0" x2="600" y2="1080" /><line x1="800" y1="0" x2="800" y2="1080" />
+    <line x1="1000" y1="0" x2="1000" y2="1080" /><line x1="1200" y1="0" x2="1200" y2="1080" />
+    <line x1="1400" y1="0" x2="1400" y2="1080" /><line x1="1600" y1="0" x2="1600" y2="1080" />
+    <line x1="1800" y1="0" x2="1800" y2="1080" />
+  </g>
+
+  <!-- Outer Frame -->
+  <rect x="40" y="35" width="1840" height="1010" rx="24" fill="none" stroke="#ff9900" stroke-width="2" opacity="0.6" />
+
+  <!-- Header -->
+  <g transform="translate(80, 70)">
+    <!-- AWS Smile Accent -->
+    <rect x="0" y="6" width="38" height="30" fill="#232f3e" rx="6" stroke="#ff9900" stroke-width="1.5" />
+    <path d="M 8 26 Q 19 32 30 26" stroke="#ff9900" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <text x="56" y="22" class="title" font-size="24">AMAZON WEB SERVICES (AWS) HARNESS ARCHITECTURE &amp; LIFECYCLE</text>
+    <text x="56" y="44" class="subtitle">AMAZON BEDROCK AGENTCORE: GUARDRAILS • FIRECRACKER MICROVM • CLOUDWATCH METRICS • BEDROCK EVALS</text>
+
+    <!-- Top Badges -->
+    <g transform="translate(1080, 2)">
+      <rect x="0" y="0" width="200" height="34" rx="8" fill="#301c05" stroke="#ff9900" stroke-width="1.2" />
+      <text x="100" y="22" text-anchor="middle" class="badge-txt" fill="#ff9900">BEDROCK AGENTCORE</text>
+
+      <rect x="220" y="0" width="230" height="34" rx="8" fill="#221038" stroke="#a855f7" stroke-width="1.2" />
+      <text x="335" y="22" text-anchor="middle" class="badge-txt" fill="#c084fc">FIRECRACKER MICROVM</text>
+
+      <rect x="470" y="0" width="210" height="34" rx="8" fill="#0c261e" stroke="#10b981" stroke-width="1.2" />
+      <text x="575" y="22" text-anchor="middle" class="badge-txt" fill="#34d399">CLOUDWATCH &amp; X-RAY</text>
+    </g>
+  </g>
+
+  <!-- 5 Columns -->
+
+  <!-- STAGE 1: INPUT GUARDRAILS -->
+  <g transform="translate(80, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgAWS)" stroke="url(#gAWS1)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#382006" />
+    <text x="30" y="42" class="stage-tag" fill="#ff9900">STAGE 01</text>
+    <text x="30" y="65" class="stage-title">INPUT GUARDRAILS</text>
+    <text x="30" y="82" class="stage-sub">Amazon Bedrock Guardrails</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#171007" stroke="#4a2e0a" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ff9900" />
+      <text x="40" y="32" class="item-title">Bedrock Prompt Attack Filter</text>
+      <text x="40" y="58" class="item-desc">Detects and blocks direct prompt</text>
+      <text x="40" y="78" class="item-desc">injection attacks &amp; jailbreaks</text>
+      <text x="40" y="98" class="item-desc">before Bedrock foundation models.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#171007" stroke="#4a2e0a" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ff9900" />
+      <text x="40" y="32" class="item-title">Content &amp; Denied Topics</text>
+      <text x="40" y="58" class="item-desc">High/Medium/Low threshold filters</text>
+      <text x="40" y="78" class="item-desc">for Hate, Insults, Sexual, Violence</text>
+      <text x="40" y="98" class="item-desc">and custom prohibited domain topics.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#171007" stroke="#4a2e0a" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ff9900" />
+      <text x="40" y="32" class="item-title">Word &amp; Regex Blocklists</text>
+      <text x="40" y="58" class="item-desc">Custom profanity and sensitive keyword</text>
+      <text x="40" y="78" class="item-desc">blocklists with regex matching</text>
+      <text x="40" y="98" class="item-desc">enforced at the Bedrock gateway.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#171007" stroke="#4a2e0a" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ff9900" />
+      <text x="40" y="32" class="item-title">AWS WAF Ingress Protection</text>
+      <text x="40" y="58" class="item-desc">API Gateway edge WAF rules blocking</text>
+      <text x="40" y="78" class="item-desc">malicious IP ranges, bot scrapers,</text>
+      <text x="40" y="98" class="item-desc">and Layer 7 DDoS volumetric attacks.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1->2 -->
+  <path d="M 405 500 L 445 500" stroke="#ff9900" stroke-width="3" fill="none" />
+  <polygon points="445,493 460,500 445,507" fill="#ff9900" />
+
+  <!-- STAGE 2: CIRCUIT BREAKERS -->
+  <g transform="translate(440, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgAWS)" stroke="url(#gAWS2)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#082338" />
+    <text x="30" y="42" class="stage-tag" fill="#38bdf8">STAGE 02</text>
+    <text x="30" y="65" class="stage-title">CIRCUIT BREAKERS</text>
+    <text x="30" y="82" class="stage-sub">CloudWatch Metrics &amp; Alarms</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#071524" stroke="#123d61" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#38bdf8" />
+      <text x="40" y="32" class="item-title">Max Step / ReAct Limiter</text>
+      <text x="40" y="58" class="item-desc">Prevents infinite agent reflection</text>
+      <text x="40" y="78" class="item-desc">and tool-calling loops with hard</text>
+      <text x="40" y="98" class="item-desc">configured max-step termination.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#071524" stroke="#123d61" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#38bdf8" />
+      <text x="40" y="32" class="item-title">Bedrock Token Budget Ledger</text>
+      <text x="40" y="58" class="item-desc">Real-time CloudWatch token alarms</text>
+      <text x="40" y="78" class="item-desc">with per-session budget ceiling to stop</text>
+      <text x="40" y="98" class="item-desc">uncontrolled cloud billing runaways.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#071524" stroke="#123d61" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#38bdf8" />
+      <text x="40" y="32" class="item-title">Action Group Error Trip</text>
+      <text x="40" y="58" class="item-desc">Immediately halts agent execution if</text>
+      <text x="40" y="78" class="item-desc">Lambda Action Groups fail repeatedly,</text>
+      <text x="40" y="98" class="item-desc">preventing cascading AWS outages.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#071524" stroke="#123d61" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#38bdf8" />
+      <text x="40" y="32" class="item-title">Lambda Execution Timeout</text>
+      <text x="40" y="58" class="item-desc">Enforces strict SLA invocation timeout</text>
+      <text x="40" y="78" class="item-desc">deadlines, terminating hung network</text>
+      <text x="40" y="98" class="item-desc">connections &amp; microservice calls.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2->3 -->
+  <path d="M 765 500 L 805 500" stroke="#38bdf8" stroke-width="3" fill="none" />
+  <polygon points="805,493 820,500 805,507" fill="#38bdf8" />
+
+  <!-- STAGE 3: AGENT & SANDBOX -->
+  <g transform="translate(800, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgAWS)" stroke="url(#gAWS3)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#2c1145" />
+    <text x="30" y="42" class="stage-tag" fill="#c084fc">STAGE 03</text>
+    <text x="30" y="65" class="stage-title">AGENT &amp; SANDBOX</text>
+    <text x="30" y="82" class="stage-sub">Bedrock AgentCore + Firecracker</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#13071f" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a855f7" />
+      <text x="40" y="32" class="item-title">Bedrock AgentCore Engine</text>
+      <text x="40" y="58" class="item-desc">Cognitive reasoning core orchestrating</text>
+      <text x="40" y="78" class="item-desc">Claude 3.5 Sonnet / Amazon Nova</text>
+      <text x="40" y="98" class="item-desc">with structured Action Group OpenAPI.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#13071f" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a855f7" />
+      <text x="40" y="32" class="item-title">Firecracker MicroVM Sandbox</text>
+      <text x="40" y="58" class="item-desc">KVM-based microVM isolation running</text>
+      <text x="40" y="78" class="item-desc">arbitrary Python code with sub-5ms</text>
+      <text x="40" y="98" class="item-desc">spin-up and zero host kernel access.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#13071f" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a855f7" />
+      <text x="40" y="32" class="item-title">IAM Role Least-Privilege</text>
+      <text x="40" y="58" class="item-desc">Action Groups restricted via tight</text>
+      <text x="40" y="78" class="item-desc">AWS IAM Execution Roles to DynamoDB,</text>
+      <text x="40" y="98" class="item-desc">S3, and specific KMS key scopes.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#13071f" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a855f7" />
+      <text x="40" y="32" class="item-title">Session State Persistence</text>
+      <text x="40" y="58" class="item-desc">Amazon DynamoDB session checkpointing</text>
+      <text x="40" y="78" class="item-desc">enabling deterministic replay buffers</text>
+      <text x="40" y="98" class="item-desc">and execution backtracking.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 3->4 -->
+  <path d="M 1125 500 L 1165 500" stroke="#a855f7" stroke-width="3" fill="none" />
+  <polygon points="1165,493 1180,500 1165,507" fill="#a855f7" />
+
+  <!-- STAGE 4: OUTPUT GUARDRAILS -->
+  <g transform="translate(1160, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgAWS)" stroke="url(#gAWS4)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#380f24" />
+    <text x="30" y="42" class="stage-tag" fill="#f472b6">STAGE 04</text>
+    <text x="30" y="65" class="stage-title">OUTPUT GUARDRAILS</text>
+    <text x="30" y="82" class="stage-sub">Contextual Grounding &amp; PII</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#1a0711" stroke="#5c193b" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ec4899" />
+      <text x="40" y="32" class="item-title">Contextual Grounding Check</text>
+      <text x="40" y="58" class="item-desc">Validates output factual adherence</text>
+      <text x="40" y="78" class="item-desc">against Bedrock Knowledge Bases (OpenSearch),</text>
+      <text x="40" y="98" class="item-desc">blocking ungrounded hallucinations.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#1a0711" stroke="#5c193b" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ec4899" />
+      <text x="40" y="32" class="item-title">Sensitive Info &amp; Key Masking</text>
+      <text x="40" y="58" class="item-desc">Automatic anonymization of SSNs,</text>
+      <text x="40" y="78" class="item-desc">credit cards, emails, and AWS Access</text>
+      <text x="40" y="98" class="item-desc">Keys before response leaves AWS.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#1a0711" stroke="#5c193b" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ec4899" />
+      <text x="40" y="32" class="item-title">Citations &amp; Metadata Anchor</text>
+      <text x="40" y="58" class="item-desc">Embeds S3 URI and passage chunk IDs</text>
+      <text x="40" y="78" class="item-desc">into responses for enterprise auditability</text>
+      <text x="40" y="98" class="item-desc">and source transparency.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#1a0711" stroke="#5c193b" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ec4899" />
+      <text x="40" y="32" class="item-title">Amazon SNS / HITL Approval</text>
+      <text x="40" y="58" class="item-desc">AWS Step Functions human approval</text>
+      <text x="40" y="78" class="item-desc">task for high-risk operations (e.g.</text>
+      <text x="40" y="98" class="item-desc">funds transfer, prod DB alterations).</text>
+    </g>
+  </g>
+
+  <!-- Arrow 4->5 -->
+  <path d="M 1485 500 L 1525 500" stroke="#ec4899" stroke-width="3" fill="none" />
+  <polygon points="1525,493 1540,500 1525,507" fill="#ec4899" />
+
+  <!-- STAGE 5: EVALS & TELEMETRY -->
+  <g transform="translate(1520, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgAWS)" stroke="url(#gAWS5)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#082b1e" />
+    <text x="30" y="42" class="stage-tag" fill="#34d399">STAGE 05</text>
+    <text x="30" y="65" class="stage-title">EVALS &amp; TELEMETRY</text>
+    <text x="30" y="82" class="stage-sub">CloudWatch &amp; Bedrock Evals</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#051a12" stroke="#124a35" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#10b981" />
+      <text x="40" y="32" class="item-title">CloudWatch &amp; X-Ray Spans</text>
+      <text x="40" y="58" class="item-desc">Distributed OpenTelemetry tracing</text>
+      <text x="40" y="78" class="item-desc">capturing LLM generation segments,</text>
+      <text x="40" y="98" class="item-desc">Lambda payloads &amp; latency waterfalls.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#051a12" stroke="#124a35" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#10b981" />
+      <text x="40" y="32" class="item-title">Bedrock Model Evaluation</text>
+      <text x="40" y="58" class="item-desc">Automated LLM-as-a-judge pipelines</text>
+      <text x="40" y="78" class="item-desc">grading Intent Relevance, Contextual</text>
+      <text x="40" y="98" class="item-desc">Groundedness, and QA Robustness.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#051a12" stroke="#124a35" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#10b981" />
+      <text x="40" y="32" class="item-title">Action Group Efficiency</text>
+      <text x="40" y="58" class="item-desc">Calculates Pass@k, reasoning path</text>
+      <text x="40" y="78" class="item-desc">economy, and token optimization</text>
+      <text x="40" y="98" class="item-desc">benchmarks across agent versions.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#051a12" stroke="#124a35" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#10b981" />
+      <text x="40" y="32" class="item-title">AWS CodePipeline CI/CD</text>
+      <text x="40" y="58" class="item-desc">Continuous evaluation regression test</text>
+      <text x="40" y="78" class="item-desc">suites running in AWS CodeBuild</text>
+      <text x="40" y="98" class="item-desc">prior to production deployments.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Evolution Spectrum Bar -->
+  <g transform="translate(80, 880)">
+    <rect width="1760" height="120" rx="16" fill="#0a121e" stroke="#ff9900" stroke-width="1.5" />
+    <text x="40" y="45" font-family="'Amazon Ember', sans-serif" font-weight="800" font-size="14" fill="#ffffff" letter-spacing="1px">THE 4 EVOLUTIONARY PARADIGMS OF AI ENGINEERING</text>
+    <text x="40" y="75" font-family="'Amazon Ember', sans-serif" font-weight="500" font-size="12" fill="#94a3b8">FROM RAW PROMPT TUNING TO AMAZON BEDROCK PRODUCTION-GRADE HARNESSES</text>
+
+    <!-- Phase 1 -->
+    <g transform="translate(680, 20)">
+      <rect width="250" height="80" rx="10" fill="#0c1d2e" stroke="#38bdf8" stroke-width="1.2" />
+      <text x="125" y="35" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="700" font-size="12" fill="#38bdf8">1. PROMPT ENGINEERING</text>
+      <text x="125" y="60" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="400" font-size="10.5" fill="#94a3b8">Few-Shot &amp; Anthropic XML</text>
+    </g>
+
+    <text x="945" y="66" font-family="'Amazon Ember', sans-serif" font-size="18" fill="#38bdf8">→</text>
+
+    <!-- Phase 2 -->
+    <g transform="translate(970, 20)">
+      <rect width="250" height="80" rx="10" fill="#1e102e" stroke="#c084fc" stroke-width="1.2" />
+      <text x="125" y="35" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="700" font-size="12" fill="#c084fc">2. CONTEXT ENGINEERING</text>
+      <text x="125" y="60" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="400" font-size="10.5" fill="#94a3b8">Bedrock KB &amp; OpenSearch</text>
+    </g>
+
+    <text x="1235" y="66" font-family="'Amazon Ember', sans-serif" font-size="18" fill="#c084fc">→</text>
+
+    <!-- Phase 3 -->
+    <g transform="translate(1260, 20)">
+      <rect width="250" height="80" rx="10" fill="#2e1405" stroke="#ff9900" stroke-width="1.2" />
+      <text x="125" y="35" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="700" font-size="12" fill="#ff9900">3. AGENT ENGINEERING</text>
+      <text x="125" y="60" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="400" font-size="10.5" fill="#94a3b8">Bedrock AgentCore Engine</text>
+    </g>
+
+    <text x="1525" y="66" font-family="'Amazon Ember', sans-serif" font-size="18" fill="#ff9900">→</text>
+
+    <!-- Phase 4 -->
+    <g transform="translate(1550, 20)">
+      <rect width="180" height="80" rx="10" fill="#082b1e" stroke="#10b981" stroke-width="1.2" />
+      <text x="90" y="35" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="700" font-size="12" fill="#10b981">4. HARNESS ENG.</text>
+      <text x="90" y="60" text-anchor="middle" font-family="'Amazon Ember', sans-serif" font-weight="400" font-size="10.5" fill="#34d399">Guardrails &amp; Firecracker</text>
+    </g>
+  </g>
+</svg>
