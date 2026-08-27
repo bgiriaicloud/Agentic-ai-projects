@@ -1,0 +1,359 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradGCP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a16" />
+      <stop offset="50%" stop-color="#091428" />
+      <stop offset="100%" stop-color="#03070f" />
+    </linearGradient>
+    
+    <linearGradient id="cardBgGCP" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1e3b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#081224" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Stage Gradients -->
+    <linearGradient id="gGCP1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4285f4" />
+      <stop offset="100%" stop-color="#1a73e8" />
+    </linearGradient>
+    <linearGradient id="gGCP2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbc04" />
+      <stop offset="100%" stop-color="#e37400" />
+    </linearGradient>
+    <linearGradient id="gGCP3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34a853" />
+      <stop offset="100%" stop-color="#188038" />
+    </linearGradient>
+    <linearGradient id="gGCP4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ea4335" />
+      <stop offset="100%" stop-color="#c5221f" />
+    </linearGradient>
+    <linearGradient id="gGCP5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a142f4" />
+      <stop offset="100%" stop-color="#8430ce" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 800; fill: #ffffff; letter-spacing: 1.5px; }
+    .subtitle { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 600; fill: #8ab4f8; font-size: 13px; letter-spacing: 1px; }
+    .stage-tag { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1.2px; }
+    .stage-title { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 18px; fill: #ffffff; }
+    .stage-sub { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 500; font-size: 12px; fill: #9aa0a6; }
+    .item-title { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 14px; fill: #f8fafc; }
+    .item-desc { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 400; font-size: 11.5px; fill: #9aa0a6; }
+    .badge-txt { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 11px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradGCP)" />
+
+  <!-- Ambient Grid -->
+  <g opacity="0.04" stroke="#4285f4" stroke-width="1">
+    <line x1="0" y1="120" x2="1920" y2="120" /><line x1="0" y1="240" x2="1920" y2="240" />
+    <line x1="0" y1="360" x2="1920" y2="360" /><line x1="0" y1="480" x2="1920" y2="480" />
+    <line x1="0" y1="600" x2="1920" y2="600" /><line x1="0" y1="720" x2="1920" y2="720" />
+    <line x1="0" y1="840" x2="1920" y2="840" /><line x1="0" y1="960" x2="1920" y2="960" />
+    <line x1="200" y1="0" x2="200" y2="1080" /><line x1="400" y1="0" x2="400" y2="1080" />
+    <line x1="600" y1="0" x2="600" y2="1080" /><line x1="800" y1="0" x2="800" y2="1080" />
+    <line x1="1000" y1="0" x2="1000" y2="1080" /><line x1="1200" y1="0" x2="1200" y2="1080" />
+    <line x1="1400" y1="0" x2="1400" y2="1080" /><line x1="1600" y1="0" x2="1600" y2="1080" />
+    <line x1="1800" y1="0" x2="1800" y2="1080" />
+  </g>
+
+  <!-- Outer Frame -->
+  <rect x="40" y="35" width="1840" height="1010" rx="24" fill="none" stroke="#1a73e8" stroke-width="2" opacity="0.6" />
+
+  <!-- Header -->
+  <g transform="translate(80, 70)">
+    <!-- GCP Cloud 4-color Bar -->
+    <rect x="0" y="4" width="8" height="34" fill="#4285f4" rx="3" />
+    <rect x="12" y="4" width="8" height="34" fill="#ea4335" rx="3" />
+    <rect x="24" y="4" width="8" height="34" fill="#fbbc04" rx="3" />
+    <rect x="36" y="4" width="8" height="34" fill="#34a853" rx="3" />
+
+    <text x="60" y="22" class="title" font-size="24">GOOGLE CLOUD (GCP) HARNESS ARCHITECTURE &amp; LIFECYCLE</text>
+    <text x="60" y="44" class="subtitle">VERTEX AI AGENT PLATFORM: MODEL ARMOR • gVISOR SANDBOX • CLOUD TRACE • SENSITIVE DATA PROTECTION • VERTEX AI EVALS</text>
+
+    <!-- Top Badges -->
+    <g transform="translate(1080, 2)">
+      <rect x="0" y="0" width="200" height="34" rx="8" fill="#102a54" stroke="#4285f4" stroke-width="1.2" />
+      <text x="100" y="22" text-anchor="middle" class="badge-txt" fill="#8ab4f8">VERTEX AI GEMINI</text>
+
+      <rect x="220" y="0" width="220" height="34" rx="8" fill="#0d2e1a" stroke="#34a853" stroke-width="1.2" />
+      <text x="330" y="22" text-anchor="middle" class="badge-txt" fill="#81c995">gVISOR CLOUD RUN</text>
+
+      <rect x="460" y="0" width="220" height="34" rx="8" fill="#2d1338" stroke="#a142f4" stroke-width="1.2" />
+      <text x="570" y="22" text-anchor="middle" class="badge-txt" fill="#d7aefb">GOOGLE CLOUD TRACE</text>
+    </g>
+  </g>
+
+  <!-- 5 Columns -->
+
+  <!-- STAGE 1: INPUT GUARDRAILS -->
+  <g transform="translate(80, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgGCP)" stroke="url(#gGCP1)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#10254c" />
+    <text x="30" y="42" class="stage-tag" fill="#8ab4f8">STAGE 01</text>
+    <text x="30" y="65" class="stage-title">INPUT GUARDRAILS</text>
+    <text x="30" y="82" class="stage-sub">Google Cloud Model Armor &amp; Safety</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#08142b" stroke="#1d3b6f" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#4285f4" />
+      <text x="40" y="32" class="item-title">Model Armor Prompt Shield</text>
+      <text x="40" y="58" class="item-desc">Intercepts direct prompt injections,</text>
+      <text x="40" y="78" class="item-desc">DAN mode &amp; system prompt overrides</text>
+      <text x="40" y="98" class="item-desc">before Gemini token consumption.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#08142b" stroke="#1d3b6f" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#4285f4" />
+      <text x="40" y="32" class="item-title">Vertex AI Safety Attributes</text>
+      <text x="40" y="58" class="item-desc">Multi-category threshold filters for</text>
+      <text x="40" y="78" class="item-desc">Hate Speech, Harassment, Sexual,</text>
+      <text x="40" y="98" class="item-desc">and Dangerous Content.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#08142b" stroke="#1d3b6f" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#4285f4" />
+      <text x="40" y="32" class="item-title">Malicious URL &amp; File Armor</text>
+      <text x="40" y="58" class="item-desc">Real-time inspection of external</text>
+      <text x="40" y="78" class="item-desc">links, file uploads, and PDFs for</text>
+      <text x="40" y="98" class="item-desc">indirect injection &amp; malware vectors.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#08142b" stroke="#1d3b6f" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#4285f4" />
+      <text x="40" y="32" class="item-title">Cloud Armor Ingress Gate</text>
+      <text x="40" y="58" class="item-desc">Enterprise WAF and rate limiting at</text>
+      <text x="40" y="78" class="item-desc">the GCP Load Balancer perimeter</text>
+      <text x="40" y="98" class="item-desc">preventing DDoS &amp; bot flooding.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1->2 -->
+  <path d="M 405 500 L 445 500" stroke="#4285f4" stroke-width="3" fill="none" />
+  <polygon points="445,493 460,500 445,507" fill="#4285f4" />
+
+  <!-- STAGE 2: CIRCUIT BREAKERS -->
+  <g transform="translate(440, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgGCP)" stroke="url(#gGCP2)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#382607" />
+    <text x="30" y="42" class="stage-tag" fill="#fbbc04">STAGE 02</text>
+    <text x="30" y="65" class="stage-title">CIRCUIT BREAKERS</text>
+    <text x="30" y="82" class="stage-sub">Vertex AI Quota &amp; Loop Control</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#1c1304" stroke="#4f3508" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#fbbc04" />
+      <text x="40" y="32" class="item-title">Step / Iteration Governor</text>
+      <text x="40" y="58" class="item-desc">Limits recursive reasoning &amp; tool</text>
+      <text x="40" y="78" class="item-desc">retry iterations, terminating rogue</text>
+      <text x="40" y="98" class="item-desc">agents after configurable thresholds.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#1c1304" stroke="#4f3508" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#fbbc04" />
+      <text x="40" y="32" class="item-title">Vertex AI Token Ledger</text>
+      <text x="40" y="58" class="item-desc">Tracks prompt/candidate token quotas</text>
+      <text x="40" y="78" class="item-desc">with hard session spend caps to</text>
+      <text x="40" y="98" class="item-desc">prevent cloud cost overruns.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#1c1304" stroke="#4f3508" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#fbbc04" />
+      <text x="40" y="32" class="item-title">Consecutive Tool Error Trip</text>
+      <text x="40" y="58" class="item-desc">Stops cascading failures when SQL</text>
+      <text x="40" y="78" class="item-desc">queries or external API tools throw</text>
+      <text x="40" y="98" class="item-desc">repeated exceptions.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#1c1304" stroke="#4f3508" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#fbbc04" />
+      <text x="40" y="32" class="item-title">Session SLA Timeout Watchdog</text>
+      <text x="40" y="58" class="item-desc">Enforces strict end-to-end latency</text>
+      <text x="40" y="78" class="item-desc">deadlines across complex multi-agent</text>
+      <text x="40" y="98" class="item-desc">hierarchical workflows.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2->3 -->
+  <path d="M 765 500 L 805 500" stroke="#fbbc04" stroke-width="3" fill="none" />
+  <polygon points="805,493 820,500 805,507" fill="#fbbc04" />
+
+  <!-- STAGE 3: AGENT & SANDBOX -->
+  <g transform="translate(800, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgGCP)" stroke="url(#gGCP3)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#0d2b17" />
+    <text x="30" y="42" class="stage-tag" fill="#81c995">STAGE 03</text>
+    <text x="30" y="65" class="stage-title">AGENT &amp; SANDBOX</text>
+    <text x="30" y="82" class="stage-sub">Vertex AI + Cloud Run gVisor</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#06190e" stroke="#1b4d29" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#34a853" />
+      <text x="40" y="32" class="item-title">Vertex AI Gemini 1.5/2.0</text>
+      <text x="40" y="58" class="item-desc">Cognitive reasoning &amp; function</text>
+      <text x="40" y="78" class="item-desc">calling engine coordinating tools</text>
+      <text x="40" y="98" class="item-desc">via Vertex Reasoning Engine / ADK.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#06190e" stroke="#1b4d29" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#34a853" />
+      <text x="40" y="32" class="item-title">gVisor Application Kernel</text>
+      <text x="40" y="58" class="item-desc">User-space kernel intercepting all</text>
+      <text x="40" y="78" class="item-desc">syscalls, creating micro-isolation</text>
+      <text x="40" y="98" class="item-desc">for executing agent Python scripts.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#06190e" stroke="#1b4d29" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#34a853" />
+      <text x="40" y="32" class="item-title">BigQuery &amp; Storage IAM</text>
+      <text x="40" y="58" class="item-desc">GCP Workload Identity federation</text>
+      <text x="40" y="78" class="item-desc">restricting tool permissions strictly</text>
+      <text x="40" y="98" class="item-desc">to least-privilege service accounts.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#06190e" stroke="#1b4d29" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#34a853" />
+      <text x="40" y="32" class="item-title">Deterministic Replay Checkpoints</text>
+      <text x="40" y="58" class="item-desc">State snapshotting allowing exact</text>
+      <text x="40" y="78" class="item-desc">re-execution of agent decision</text>
+      <text x="40" y="98" class="item-desc">trajectories for debugging &amp; audits.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 3->4 -->
+  <path d="M 1125 500 L 1165 500" stroke="#34a853" stroke-width="3" fill="none" />
+  <polygon points="1165,493 1180,500 1165,507" fill="#34a853" />
+
+  <!-- STAGE 4: OUTPUT GUARDRAILS -->
+  <g transform="translate(1160, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgGCP)" stroke="url(#gGCP4)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#3b110e" />
+    <text x="30" y="42" class="stage-tag" fill="#f28b82">STAGE 04</text>
+    <text x="30" y="65" class="stage-title">OUTPUT GUARDRAILS</text>
+    <text x="30" y="82" class="stage-sub">Vertex Grounding &amp; Cloud DLP</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#1f0a08" stroke="#521d18" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ea4335" />
+      <text x="40" y="32" class="item-title">Vertex AI Groundedness Check</text>
+      <text x="40" y="58" class="item-desc">Factually verifies generated outputs</text>
+      <text x="40" y="78" class="item-desc">against Google Search or enterprise</text>
+      <text x="40" y="98" class="item-desc">Vertex AI Search datastores.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#1f0a08" stroke="#521d18" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ea4335" />
+      <text x="40" y="32" class="item-title">Sensitive Data Protection (DLP)</text>
+      <text x="40" y="58" class="item-desc">Automatic PII / PCI redaction of SSNs,</text>
+      <text x="40" y="78" class="item-desc">credit card numbers, and API keys</text>
+      <text x="40" y="98" class="item-desc">before delivery to end users.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#1f0a08" stroke="#521d18" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ea4335" />
+      <text x="40" y="32" class="item-title">Output Citation Verifier</text>
+      <text x="40" y="58" class="item-desc">Ensures exact bibliographic citation</text>
+      <text x="40" y="78" class="item-desc">metadata is anchored to source</text>
+      <text x="40" y="98" class="item-desc">passages for enterprise trust.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#1f0a08" stroke="#521d18" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#ea4335" />
+      <text x="40" y="32" class="item-title">Human-in-the-Loop Gate</text>
+      <text x="40" y="58" class="item-desc">Cloud Pub/Sub notification workflow</text>
+      <text x="40" y="78" class="item-desc">requiring supervisor signoff on</text>
+      <text x="40" y="98" class="item-desc">high-impact DB writes &amp; actions.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 4->5 -->
+  <path d="M 1485 500 L 1525 500" stroke="#ea4335" stroke-width="3" fill="none" />
+  <polygon points="1525,493 1540,500 1525,507" fill="#ea4335" />
+
+  <!-- STAGE 5: EVALS & TELEMETRY -->
+  <g transform="translate(1520, 160)">
+    <rect width="320" height="690" rx="16" fill="url(#cardBgGCP)" stroke="url(#gGCP5)" stroke-width="2" />
+    <rect x="15" y="15" width="290" height="75" rx="10" fill="#28113d" />
+    <text x="30" y="42" class="stage-tag" fill="#d7aefb">STAGE 05</text>
+    <text x="30" y="65" class="stage-title">EVALS &amp; TELEMETRY</text>
+    <text x="30" y="82" class="stage-sub">Cloud Trace &amp; Vertex AI Evals</text>
+
+    <g transform="translate(15, 105)">
+      <rect width="290" height="115" rx="10" fill="#170924" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a142f4" />
+      <text x="40" y="32" class="item-title">Cloud Trace OpenTelemetry</text>
+      <text x="40" y="58" class="item-desc">Distributed end-to-end tracing</text>
+      <text x="40" y="78" class="item-desc">capturing LLM generation spans,</text>
+      <text x="40" y="98" class="item-desc">tool payloads &amp; latency waterfalls.</text>
+    </g>
+    <g transform="translate(15, 235)">
+      <rect width="290" height="115" rx="10" fill="#170924" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a142f4" />
+      <text x="40" y="32" class="item-title">Vertex AI Evaluation Service</text>
+      <text x="40" y="58" class="item-desc">Automated LLM-as-a-judge pipelines</text>
+      <text x="40" y="78" class="item-desc">evaluating Instruction Adherence,</text>
+      <text x="40" y="98" class="item-desc">Groundedness, and QA Quality.</text>
+    </g>
+    <g transform="translate(15, 365)">
+      <rect width="290" height="115" rx="10" fill="#170924" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a142f4" />
+      <text x="40" y="32" class="item-title">Trajectory Efficiency Metric</text>
+      <text x="40" y="58" class="item-desc">Calculates Pass@k, reasoning path</text>
+      <text x="40" y="78" class="item-desc">economy, and token optimization</text>
+      <text x="40" y="98" class="item-desc">benchmarks for agent improvement.</text>
+    </g>
+    <g transform="translate(15, 495)">
+      <rect width="290" height="115" rx="10" fill="#170924" stroke="#481878" stroke-width="1" />
+      <circle cx="24" cy="28" r="6" fill="#a142f4" />
+      <text x="40" y="32" class="item-title">Cloud Build CI/CD Testing</text>
+      <text x="40" y="58" class="item-desc">Automated evaluation regression test</text>
+      <text x="40" y="78" class="item-desc">suites running in Google Cloud Build</text>
+      <text x="40" y="98" class="item-desc">prior to production deployments.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Evolution Spectrum Bar -->
+  <g transform="translate(80, 880)">
+    <rect width="1760" height="120" rx="16" fill="#091428" stroke="#1a73e8" stroke-width="1.5" />
+    <text x="40" y="45" font-family="'Google Sans', sans-serif" font-weight="800" font-size="14" fill="#ffffff" letter-spacing="1px">THE 4 EVOLUTIONARY PARADIGMS OF AI ENGINEERING</text>
+    <text x="40" y="75" font-family="'Google Sans', sans-serif" font-weight="500" font-size="12" fill="#80868b">FROM PROMPT TUNING TO GOOGLE CLOUD VERTEX AI PRODUCTION HARNESSES</text>
+
+    <!-- Phase 1 -->
+    <g transform="translate(680, 20)">
+      <rect width="250" height="80" rx="10" fill="#0c234a" stroke="#4285f4" stroke-width="1.2" />
+      <text x="125" y="35" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="700" font-size="12" fill="#8ab4f8">1. PROMPT ENGINEERING</text>
+      <text x="125" y="60" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="400" font-size="10.5" fill="#9aa0a6">Zero/Few-Shot &amp; CoT</text>
+    </g>
+
+    <text x="945" y="66" font-family="'Google Sans', sans-serif" font-size="18" fill="#4285f4">→</text>
+
+    <!-- Phase 2 -->
+    <g transform="translate(970, 20)">
+      <rect width="250" height="80" rx="10" fill="#14173d" stroke="#818cf8" stroke-width="1.2" />
+      <text x="125" y="35" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="700" font-size="12" fill="#818cf8">2. CONTEXT ENGINEERING</text>
+      <text x="125" y="60" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="400" font-size="10.5" fill="#9aa0a6">Vertex Search &amp; GraphRAG</text>
+    </g>
+
+    <text x="1235" y="66" font-family="'Google Sans', sans-serif" font-size="18" fill="#818cf8">→</text>
+
+    <!-- Phase 3 -->
+    <g transform="translate(1260, 20)">
+      <rect width="250" height="80" rx="10" fill="#0d2b17" stroke="#34a853" stroke-width="1.2" />
+      <text x="125" y="35" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="700" font-size="12" fill="#81c995">3. AGENT ENGINEERING</text>
+      <text x="125" y="60" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="400" font-size="10.5" fill="#9aa0a6">Reasoning Engine &amp; Tools</text>
+    </g>
+
+    <text x="1525" y="66" font-family="'Google Sans', sans-serif" font-size="18" fill="#34a853">→</text>
+
+    <!-- Phase 4 -->
+    <g transform="translate(1550, 20)">
+      <rect width="180" height="80" rx="10" fill="#33100e" stroke="#ea4335" stroke-width="1.2" />
+      <text x="90" y="35" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="700" font-size="12" fill="#f28b82">4. HARNESS ENG.</text>
+      <text x="90" y="60" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="400" font-size="10.5" fill="#f6aea9">Model Armor &amp; gVisor</text>
+    </g>
+  </g>
+</svg>

@@ -236,3 +236,48 @@ flowchart TD
    - **Azure AI Evaluation SDK (`azure-ai-evaluation`):** Automated evaluation pipelines computing *Relevance*, *Groundedness*, *Coherence*, and *Trajectory Efficiency (Pass@k)*.
 
 👉 See the complete runnable demo code and architectural implementation in the [`azure_harness_demo/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/azure_harness_demo) directory.
+
+---
+
+## 6. 🌐 Enterprise Case Study: Google Cloud Platform (GCP) Harness Engineering
+
+Alongside Azure, Google Cloud provides a cloud-native agent production harness built on Vertex AI, Google Cloud Model Armor, gVisor, and Cloud Trace:
+
+```mermaid
+flowchart TD
+    User([User Prompt / Task]) --> InGuard["Google Cloud Model Armor & Safety Settings<br/>(Input Guardrails)"]
+    
+    subgraph GCP_Harness["Google Cloud Agent Production Harness"]
+        InGuard --> Controller["Vertex AI Quota & Circuit Breakers<br/>(Token Ledger, Max Loops, Timeout)"]
+        
+        subgraph Core["Agent & Execution Layer"]
+            Controller --> Agent["Vertex AI Gemini 1.5/2.0<br/>(Cognitive Reasoning Core)"]
+            Agent <--> Sandbox["Cloud Run with gVisor Kernel Isolation<br/>(Sandboxed Python & BigQuery Execution)"]
+        end
+        
+        Core --> OutGuard["Sensitive Data Protection DLP & Groundedness<br/>(PII Redaction & Search Verification)"]
+        OutGuard --> Telemetry["Google Cloud Trace & Cloud Logging<br/>(OpenTelemetry Trajectory Spans)"]
+    end
+    
+    Telemetry --> EvalHarness["Vertex AI Gen AI Evaluation Service<br/>(Groundedness, Instruction Following, Pass@k)"]
+    OutGuard --> Output([Verified Safe Output & Telemetry Report])
+```
+
+### GCP Harness Tech Stack
+
+1. **Safety & Guardrails:**
+   - **Google Cloud Model Armor:** Real-time sanitization of direct prompt injection, jailbreaks, and malicious URLs.
+   - **Vertex AI Safety Attributes:** Severity scoring across Harassment, Hate Speech, and Dangerous Content.
+   - **Cloud Sensitive Data Protection (DLP):** Real-time detection and redaction of PII, credit cards, and API secrets.
+2. **Execution & Sandboxing:**
+   - **Cloud Run with gVisor Kernel Isolation:** Application-kernel level micro-virtualization preventing unauthorized system calls.
+   - **Workload Identity Federation:** Least-privilege IAM access for tool and database invocations.
+3. **Control & Circuit Breakers:**
+   - **Vertex AI Token Quota Ledger:** Session token consumption boundaries.
+   - **Step Governor & Failure Halter:** Intercepts runaway loops and repeated tool failures.
+4. **Distributed Observability:**
+   - **Google Cloud Trace & Cloud Logging:** OpenTelemetry distributed spans across agents, tools, and guardrails.
+5. **Continuous Evaluation:**
+   - **Vertex AI Gen AI Evaluation Service (`vertexai.preview.evaluation`):** Automated evaluation pipelines computing *Groundedness*, *Instruction Following*, and *Trajectory Pass@k*.
+
+👉 See the complete runnable demo code in the [`gcp_harness_demo/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/gcp_harness_demo) directory.
