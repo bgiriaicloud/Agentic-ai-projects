@@ -1,9 +1,0 @@
-google-antigravity
-mcp
-fastmcp
-pydantic
-python-dotenv
-google-cloud-vertexai
-fastapi
-uvicorn
-
