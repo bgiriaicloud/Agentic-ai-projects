@@ -1,0 +1,8 @@
+# Google Cloud Multi-Tenant Agent Platform Dependencies
+google-cloud-aiplatform>=1.60.0
+google-cloud-dlp>=3.16.0
+google-cloud-logging>=3.11.0
+google-cloud-bigquery>=3.20.0
+pydantic>=2.5.0
+requests>=2.31.0
+python-dotenv>=1.0.0

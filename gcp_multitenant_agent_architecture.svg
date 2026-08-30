@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1350" width="100%" height="100%">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <style>
+    .txt-title { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 700; fill: #202124; font-size: 15px; }
+    .txt-sub { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 500; fill: #5f6368; font-size: 11.5px; }
+    .txt-bold { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 600; fill: #202124; font-size: 13px; }
+    .txt-sm { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 500; fill: #5f6368; font-size: 11px; }
+    .step-num { font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 13px; fill: #ffffff; text-anchor: middle; dominant-baseline: central; }
+    .flow-line { stroke: #202124; stroke-width: 1.8; fill: none; }
+    .dashed-line { stroke: #5f6368; stroke-width: 1.5; stroke-dasharray: 5,4; fill: none; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="1350" fill="#ffffff" />
+
+  <!-- User Icon Top -->
+  <g transform="translate(560, 30)">
+    <rect x="0" y="0" width="80" height="85" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.8" filter="url(#cardShadow)" />
+    <!-- User Avatar Icon -->
+    <circle cx="40" cy="30" r="12" fill="#202124" />
+    <path d="M 22 62 Q 40 45 58 62 Z" fill="#202124" />
+    <text x="40" y="75" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="600" font-size="12" fill="#202124">User</text>
+  </g>
+
+  <!-- Flow 1 & 7 Arrows (User <-> External LB) -->
+  <line x1="580" y1="120" x2="580" y2="400" class="flow-line" marker-end="url(#arrow)" />
+  <line x1="620" y1="400" x2="620" y2="120" class="flow-line" />
+  <polygon points="580,405 575,395 585,395" fill="#202124" />
+  <polygon points="620,115 615,125 625,125" fill="#202124" />
+
+  <text x="525" y="145" class="txt-bold">Request</text>
+  <circle cx="580" cy="142" r="14" fill="#1a73e8" />
+  <text x="580" y="143" class="step-num">1</text>
+
+  <circle cx="620" cy="142" r="14" fill="#1a73e8" />
+  <text x="620" y="143" class="step-num">7</text>
+  <text x="645" y="145" class="txt-bold">Response</text>
+
+  <!-- Outer GCP Main Frame -->
+  <g transform="translate(50, 180)">
+    <!-- GCP Cloud Box -->
+    <rect x="0" y="0" width="1100" height="1130" rx="20" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5" />
+    
+    <!-- GCP Title Banner -->
+    <text x="25" y="32" font-family="'Google Sans', sans-serif" font-weight="700" font-size="20" fill="#1a73e8">Google Cloud</text>
+    <text x="25" y="58" class="txt-bold" font-size="14">Shared hubs</text>
+
+    <!-- Shared Hubs VPC Box -->
+    <rect x="25" y="70" width="1050" height="400" rx="14" fill="#ffffff" stroke="#202124" stroke-width="1.6" />
+    <text x="45" y="95" class="txt-bold">VPC</text>
+
+    <!-- 1. Routing Hub (Central Ingress) -->
+    <g transform="translate(45, 105)">
+      <rect x="0" y="0" width="670" height="345" rx="12" fill="#d2e3fc" stroke="#1a73e8" stroke-width="1.5" />
+      <text x="20" y="30" class="txt-title">Routing hub</text>
+      <text x="20" y="48" class="txt-sub">Central ingress</text>
+
+      <!-- Cloud Armor -->
+      <g transform="translate(20, 70)">
+        <rect x="0" y="0" width="190" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="35" cy="32" r="14" fill="#e8f0fe" />
+        <path d="M 28 32 L 35 25 L 42 32 L 35 39 Z" fill="#1a73e8" />
+        <text x="60" y="37" class="txt-bold">Cloud Armor</text>
+      </g>
+
+      <!-- Model Armor -->
+      <g transform="translate(20, 150)">
+        <rect x="0" y="0" width="190" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="35" cy="32" r="14" fill="#e8f0fe" />
+        <polygon points="35,22 39,30 47,32 41,37 43,45 35,40 27,45 29,37 23,32 31,30" fill="#1a73e8" />
+        <text x="60" y="37" class="txt-bold">Model Armor</text>
+      </g>
+
+      <!-- IAP (Identity-Aware Proxy) -->
+      <g transform="translate(90, 240)">
+        <rect x="0" y="0" width="120" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="32" cy="32" r="12" fill="#e8f0fe" />
+        <path d="M 32 23 L 40 27 L 40 37 Q 32 42 32 42 Q 24 37 24 37 L 24 27 Z" fill="#1a73e8" />
+        <text x="56" y="37" class="txt-bold">IAP</text>
+      </g>
+
+      <!-- External Application Load Balancer -->
+      <g transform="translate(350, 90)">
+        <rect x="0" y="0" width="280" height="75" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="35" cy="37" r="14" fill="#e8f0fe" />
+        <rect x="27" y="29" width="16" height="16" fill="#1a73e8" rx="3" />
+        <text x="60" y="34" class="txt-bold">External Application</text>
+        <text x="60" y="50" class="txt-bold">Load Balancer</text>
+        <text x="60" y="66" class="txt-sub">Cloud Load Balancing</text>
+      </g>
+
+      <!-- Cloud Run Frontend Portal -->
+      <g transform="translate(380, 240)">
+        <rect x="0" y="0" width="220" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <polygon points="25,44 35,22 45,32 35,44" fill="#ea4335" />
+        <polygon points="35,44 45,32 55,44" fill="#fbbc04" />
+        <text x="68" y="32" class="txt-bold">Cloud Run</text>
+        <text x="68" y="50" class="txt-sub">Frontend portal</text>
+      </g>
+
+      <!-- Connectors in Routing Hub -->
+      <line x1="210" y1="102" x2="350" y2="102" class="flow-line" />
+      <text x="240" y="90" class="txt-sm">Security</text>
+      <text x="240" y="103" class="txt-sm">policies</text>
+
+      <line x1="350" y1="140" x2="210" y2="175" class="flow-line" />
+      <polygon points="210,175 220,170 218,180" fill="#202124" />
+      <text x="240" y="165" class="txt-sm">Sanitize</text>
+      <text x="240" y="178" class="txt-sm">prompt</text>
+
+      <line x1="210" y1="272" x2="380" y2="272" class="flow-line" />
+      <text x="245" y="260" class="txt-sm">User</text>
+      <text x="245" y="273" class="txt-sm">authentication</text>
+
+      <!-- LB <-> Cloud Run -->
+      <line x1="475" y1="165" x2="475" y2="240" class="flow-line" />
+      <line x1="505" y1="240" x2="505" y2="165" class="flow-line" />
+      <polygon points="475,240 470,230 480,230" fill="#202124" />
+      <polygon points="505,165 500,175 510,175" fill="#202124" />
+
+      <text x="415" y="205" class="txt-sm">Request</text>
+      <circle cx="475" cy="200" r="12" fill="#1a73e8" />
+      <text x="475" y="201" class="step-num">2</text>
+
+      <circle cx="505" cy="200" r="12" fill="#1a73e8" />
+      <text x="505" y="201" class="step-num">7</text>
+      <text x="525" y="205" class="txt-sm">Response</text>
+    </g>
+
+    <!-- 2. Central Governance and Security Hub -->
+    <g transform="translate(740, 105)">
+      <rect x="0" y="0" width="335" height="345" rx="12" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5" />
+      <text x="20" y="30" class="txt-title">Central governance and</text>
+      <text x="20" y="48" class="txt-title">security hub</text>
+
+      <!-- Security Command Center -->
+      <g transform="translate(20, 70)">
+        <rect x="0" y="0" width="295" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <rect x="20" y="18" width="28" height="28" fill="#fce8e6" rx="4" />
+        <text x="60" y="34" class="txt-bold">Security Command</text>
+        <text x="60" y="50" class="txt-bold">Center</text>
+      </g>
+
+      <!-- Central IAM -->
+      <g transform="translate(20, 150)">
+        <rect x="0" y="0" width="295" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="34" cy="32" r="14" fill="#e8f0fe" />
+        <text x="60" y="38" class="txt-bold">Central IAM</text>
+      </g>
+
+      <!-- Cloud Logging -->
+      <g transform="translate(20, 230)">
+        <rect x="0" y="0" width="295" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="34" cy="32" r="14" fill="#e8f0fe" />
+        <text x="60" y="38" class="txt-bold">Cloud Logging</text>
+      </g>
+    </g>
+
+    <!-- 3. PAB Tenant Projects Layer -->
+
+    <!-- Tenant A (Finance) -->
+    <g transform="translate(25, 490)">
+      <rect x="0" y="0" width="510" height="610" rx="14" fill="#ffffff" stroke="#202124" stroke-width="1.6" />
+      <text x="20" y="25" class="txt-bold">PAB</text>
+
+      <rect x="15" y="35" width="480" height="560" rx="10" fill="#fef7e0" stroke="#f9ab00" stroke-width="1.4" />
+      <text x="35" y="65" class="txt-title">Tenant A</text>
+      <text x="35" y="82" class="txt-sub">Tenant project</text>
+
+      <!-- Model Armor -->
+      <g transform="translate(35, 105)">
+        <rect x="0" y="0" width="200" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <polygon points="35,22 39,30 47,32 41,37 43,45 35,40 27,45 29,37 23,32 31,30" fill="#1a73e8" />
+        <text x="60" y="38" class="txt-bold">Model Armor</text>
+      </g>
+
+      <!-- Agent Runtime -->
+      <g transform="translate(260, 145)">
+        <rect x="0" y="0" width="215" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <polygon points="30,22 38,32 30,42 22,32" fill="#34a853" />
+        <text x="55" y="32" class="txt-bold">Agent Runtime</text>
+        <text x="55" y="48" class="txt-sub">Agent Platform</text>
+      </g>
+
+      <!-- Gemini -->
+      <g transform="translate(35, 300)">
+        <rect x="0" y="0" width="200" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <polygon points="30,22 38,32 30,42 22,32" fill="#4285f4" />
+        <text x="55" y="32" class="txt-bold">Gemini</text>
+        <text x="55" y="48" class="txt-sub">Agent Platform</text>
+      </g>
+
+      <!-- MCP Servers -->
+      <g transform="translate(275, 270)">
+        <rect x="0" y="0" width="190" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="30" cy="32" r="10" fill="#e8f0fe" />
+        <text x="55" y="38" class="txt-bold">MCP servers</text>
+      </g>
+
+      <!-- Datastore -->
+      <g transform="translate(260, 400)">
+        <rect x="0" y="0" width="215" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <ellipse cx="32" cy="26" rx="10" ry="4" fill="#1a73e8" />
+        <rect x="22" y="26" width="20" height="12" fill="#1a73e8" />
+        <ellipse cx="32" cy="38" rx="10" ry="4" fill="#1a73e8" />
+        <text x="55" y="32" class="txt-bold">Datastore</text>
+        <text x="55" y="48" class="txt-sub">BigQuery, AlloyDB, etc.</text>
+      </g>
+
+      <!-- Tenant A Internal Connectors -->
+      <line x1="260" y1="160" x2="235" y2="145" class="flow-line" />
+      <polygon points="235,145 245,143 243,152" fill="#202124" />
+
+      <line x1="235" y1="155" x2="260" y2="175" class="flow-line" />
+      <polygon points="260,175 250,175 252,166" fill="#202124" />
+
+      <circle cx="85" cy="200" r="12" fill="#1a73e8" />
+      <text x="85" y="201" class="step-num">4</text>
+      <text x="105" y="204" class="txt-sm">Sanitize request</text>
+
+      <circle cx="85" cy="240" r="12" fill="#1a73e8" />
+      <text x="85" y="241" class="step-num">6</text>
+      <text x="105" y="244" class="txt-sm">Sanitize response</text>
+
+      <!-- Agent Runtime <-> Gemini -->
+      <line x1="260" y1="190" x2="200" y2="300" class="flow-line" />
+      <line x1="200" y1="315" x2="265" y2="205" class="flow-line" />
+
+      <circle cx="85" cy="395" r="12" fill="#1a73e8" />
+      <text x="85" y="396" class="step-num">5</text>
+      <text x="105" y="399" class="txt-sm">Generates</text>
+      <text x="105" y="415" class="txt-sm">response</text>
+
+      <!-- Agent Runtime <-> MCP Server -->
+      <line x1="370" y1="210" x2="370" y2="270" class="flow-line" />
+      <polygon points="370,210 365,220 375,220" fill="#202124" />
+      <polygon points="370,270 365,260 375,260" fill="#202124" />
+      <text x="350" y="240" class="txt-sm">Secure</text>
+      <text x="350" y="254" class="txt-sm">RAG</text>
+
+      <!-- MCP <-> Datastore -->
+      <line x1="370" y1="335" x2="370" y2="400" class="flow-line" />
+      <polygon points="370,335 365,345 375,345" fill="#202124" />
+      <polygon points="370,400 365,390 375,390" fill="#202124" />
+      <text x="330" y="365" class="txt-sm">Agent-tool</text>
+      <text x="330" y="379" class="txt-sm">interaction</text>
+    </g>
+
+    <!-- Tenant B (Healthcare) -->
+    <g transform="translate(565, 490)">
+      <rect x="0" y="0" width="510" height="610" rx="14" fill="#ffffff" stroke="#202124" stroke-width="1.6" />
+      <text x="20" y="25" class="txt-bold">PAB</text>
+
+      <rect x="15" y="35" width="480" height="560" rx="10" fill="#fce8e6" stroke="#ea4335" stroke-width="1.4" />
+      <text x="35" y="65" class="txt-title">Tenant B</text>
+      <text x="35" y="82" class="txt-sub">Tenant project</text>
+
+      <!-- Model Armor -->
+      <g transform="translate(35, 105)">
+        <rect x="0" y="0" width="190" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <polygon points="35,22 39,30 47,32 41,37 43,45 35,40 27,45 29,37 23,32 31,30" fill="#1a73e8" />
+        <text x="60" y="38" class="txt-bold">Model Armor</text>
+      </g>
+
+      <!-- Gemini -->
+      <g transform="translate(35, 195)">
+        <rect x="0" y="0" width="190" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <polygon points="30,22 38,32 30,42 22,32" fill="#4285f4" />
+        <text x="55" y="32" class="txt-bold">Gemini</text>
+        <text x="55" y="48" class="txt-sub">Agent Platform</text>
+      </g>
+
+      <!-- Agent Runtime -->
+      <g transform="translate(260, 145)">
+        <rect x="0" y="0" width="215" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <polygon points="30,22 38,32 30,42 22,32" fill="#34a853" />
+        <text x="55" y="32" class="txt-bold">Agent Runtime</text>
+        <text x="55" y="48" class="txt-sub">Agent Platform</text>
+      </g>
+
+      <!-- MCP Servers -->
+      <g transform="translate(275, 270)">
+        <rect x="0" y="0" width="190" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <circle cx="30" cy="32" r="10" fill="#e8f0fe" />
+        <text x="55" y="38" class="txt-bold">MCP servers</text>
+      </g>
+
+      <!-- Datastore -->
+      <g transform="translate(260, 400)">
+        <rect x="0" y="0" width="215" height="65" rx="8" fill="#ffffff" stroke="#202124" stroke-width="1.4" filter="url(#cardShadow)" />
+        <ellipse cx="32" cy="26" rx="10" ry="4" fill="#1a73e8" />
+        <rect x="22" y="26" width="20" height="12" fill="#1a73e8" />
+        <ellipse cx="32" cy="38" rx="10" ry="4" fill="#1a73e8" />
+        <text x="55" y="32" class="txt-bold">Datastore</text>
+        <text x="55" y="48" class="txt-sub">BigQuery, AlloyDB, etc.</text>
+      </g>
+
+      <!-- Connectors Tenant B -->
+      <line x1="225" y1="135" x2="260" y2="155" class="flow-line" />
+      <line x1="225" y1="225" x2="260" y2="185" class="flow-line" />
+
+      <line x1="370" y1="210" x2="370" y2="270" class="flow-line" />
+      <polygon points="370,210 365,220 375,220" fill="#202124" />
+      <polygon points="370,270 365,260 375,260" fill="#202124" />
+      <text x="350" y="240" class="txt-sm">Secure</text>
+      <text x="350" y="254" class="txt-sm">RAG</text>
+
+      <line x1="370" y1="335" x2="370" y2="400" class="flow-line" />
+      <polygon points="370,335 365,345 375,345" fill="#202124" />
+      <polygon points="370,400 365,390 375,390" fill="#202124" />
+      <text x="330" y="365" class="txt-sm">Agent-tool</text>
+      <text x="330" y="379" class="txt-sm">interaction</text>
+    </g>
+
+    <!-- Cross-Hub Connectors (Frontend <-> Tenants Step 3 & 7) -->
+    <path d="M 480 410 L 480 465 L 260 465 L 260 520" class="dashed-line" />
+    <path d="M 480 465 L 750 465 L 750 520" class="dashed-line" />
+    <polygon points="260,525 255,515 265,515" fill="#202124" />
+    <polygon points="750,525 745,515 755,515" fill="#202124" />
+
+    <circle cx="320" cy="465" r="12" fill="#1a73e8" />
+    <text x="320" y="466" class="step-num">3</text>
+    <text x="340" y="460" class="txt-sm">Route request</text>
+    <text x="340" y="474" class="txt-sm">to tenant</text>
+
+    <!-- Return Sanitized Response Step 7 -->
+    <path d="M 390 520 L 390 440 L 515 440 L 515 410" class="flow-line" />
+    <polygon points="515,410 510,420 520,420" fill="#202124" />
+    <circle cx="530" cy="465" r="12" fill="#1a73e8" />
+    <text x="530" y="466" class="step-num">7</text>
+    <text x="550" y="460" class="txt-sm">Sanitized response</text>
+    <text x="550" y="474" class="txt-sm">from tenant</text>
+
+    <!-- Central Monitoring dashed arrow -->
+    <path d="M 850 520 L 850 460" class="dashed-line" />
+    <polygon points="850,455 845,465 855,465" fill="#5f6368" />
+    <text x="865" y="480" class="txt-sm">Security and</text>
+    <text x="865" y="494" class="txt-sm">observability</text>
+    <text x="865" y="508" class="txt-sm">monitoring</text>
+  </g>
+</svg>

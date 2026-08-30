@@ -326,3 +326,73 @@ flowchart TD
    - **Amazon Bedrock Automated Model Evaluation:** Evaluates Intent Relevance, Groundedness, and Action Group Pass@k efficiency.
 
 👉 See the complete runnable demo code in the [`aws_harness_demo/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/aws_harness_demo) directory.
+
+---
+
+## 8. 🏢 Enterprise Architecture: Google Cloud Multi-Tenant Agent Platform (Shared Hubs & PAB)
+
+For large-scale enterprise deployments with multiple business units (Finance, Healthcare, Sales), Google Cloud provides a reference **Multi-Tenant Agentic AI Architecture** implementing perimeter security, tenant isolation, dual-layer Model Armor, and Model Context Protocol (MCP) tool integration:
+
+```mermaid
+flowchart TD
+    User([User Client]) <-->|1. Request / 7. Response| ALB[External Application Load Balancer]
+    
+    subgraph SharedHubs["Shared Hubs (VPC)"]
+        subgraph RoutingHub["Routing Hub (Central Ingress)"]
+            ALB <-->|Security Policies| CloudArmor[Cloud Armor WAF]
+            ALB <-->|Sanitize Prompt| CentralModelArmor[Central Model Armor]
+            ALB <-->|2. Request / 7. Response| CloudRun[Cloud Run Frontend Portal]
+            CloudRun <-->|User Authentication| IAP[Identity-Aware Proxy IAP]
+        end
+        
+        subgraph GovernanceHub["Central Governance & Security Hub"]
+            SCC[Security Command Center]
+            IAM[Central IAM RBAC/ABAC]
+            Logging[Cloud Logging & Cloud Trace]
+        end
+    end
+    
+    CloudRun -->|3. Route Request to Tenant| PAB_A["PAB (Principal Access Boundary)"]
+    CloudRun -->|3. Route Request to Tenant| PAB_B["PAB (Principal Access Boundary)"]
+    
+    subgraph TenantA["Tenant A (Finance Project)"]
+        PAB_A --> TenantArmorA["Model Armor<br/>4. Sanitize Request<br/>6. Sanitize Response"]
+        TenantArmorA <--> AgentRuntimeA["Agent Runtime<br/>(Agent Platform)"]
+        AgentRuntimeA <-->|5. Generates Response| GeminiA[Gemini 1.5 Pro]
+        AgentRuntimeA <-->|Secure RAG| MCPA["MCP Servers<br/>(Model Context Protocol)"]
+        MCPA <-->|Agent-Tool Interaction| DatastoreA[(BigQuery Datastore)]
+    end
+    
+    subgraph TenantB["Tenant B (Healthcare Project)"]
+        PAB_B --> TenantArmorB["Model Armor<br/>4. Sanitize Request<br/>6. Sanitize Response"]
+        TenantArmorB <--> AgentRuntimeB["Agent Runtime<br/>(Agent Platform)"]
+        AgentRuntimeB <-->|5. Generates Response| GeminiB[Gemini 1.5 Pro]
+        AgentRuntimeB <-->|Secure RAG| MCPB["MCP Servers<br/>(Model Context Protocol)"]
+        MCPB <-->|Agent-Tool Interaction| DatastoreB[(AlloyDB Datastore)]
+    end
+    
+    TenantArmorA -->|7. Sanitized Response| CloudRun
+    TenantArmorB -->|7. Sanitized Response| CloudRun
+    
+    TenantA -.->|Security & Observability| GovernanceHub
+    TenantB -.->|Security & Observability| GovernanceHub
+```
+
+### Key Architectural Pillars
+
+1. **Shared Routing Hub (Central Ingress):**
+   - **External Application Load Balancer:** Anycast SSL termination and Layer 7 traffic routing.
+   - **Cloud Armor:** WAF rules blocking OWASP attacks, SQLi, and Layer 7 DDoS.
+   - **Central Model Armor:** Edge prompt inspection intercepting direct injection and jailbreaks before tenant routing.
+   - **Identity-Aware Proxy (IAP):** SSO and context-aware identity authentication.
+   - **Cloud Run Frontend:** Lightweight, serverless portal managing tenant routing.
+2. **PAB (Principal Access Boundaries):**
+   - Enforces strict cryptographically verified tenant project isolation, ensuring zero cross-tenant resource visibility.
+3. **Tenant Projects (Model Armor + MCP + Gemini):**
+   - **Tenant Model Armor:** Performs **Step 4 (Ingress Sanitization)** and **Step 6 (Egress Sanitization & Cloud DLP PII Redaction)**.
+   - **MCP Servers (Model Context Protocol):** Standardized open tool integration for **Secure RAG** over isolated datastores (**BigQuery**, **AlloyDB**).
+   - **Gemini Agent Platform:** Foundation model cognitive reasoning engine.
+4. **Central Governance & Security Hub:**
+   - Unified Security Command Center (SCC), Central IAM, and Cloud Logging auditing all cross-tenant events.
+
+👉 See the complete runnable demo code in the [`gcp_multitenant_agent_platform/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/gcp_multitenant_agent_platform) directory.
