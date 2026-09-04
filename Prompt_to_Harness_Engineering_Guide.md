@@ -396,3 +396,38 @@ flowchart TD
    - Unified Security Command Center (SCC), Central IAM, and Cloud Logging auditing all cross-tenant events.
 
 👉 See the complete runnable demo code in the [`gcp_multitenant_agent_platform/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/gcp_multitenant_agent_platform) directory.
+
+---
+
+## 8. 💰 FinOps for the Agentic Harness (The Hidden Cost of Non-Functional LLM Calls)
+
+> **Core Philosophy:** *"How do we govern, measure, and optimize the unit economics of autonomous agent harnesses where non-functional LLM calls account for 75%+ of token bills?"*
+
+In enterprise deployments, a single user prompt frequently triggers a cascade of **4 to 12 auxiliary LLM calls** inside the harness for:
+- **Pre-Execution Guardrails:** Prompt injection scanning, jailbreak detection, ingress PII scrubbing.
+- **Memory & State:** Working memory rolling summarization, episodic memory extraction, listwise candidate reranking.
+- **Post-Execution Guardrails:** Groundedness & hallucination audits (repassing full retrieved context), corporate tone and egress compliance.
+- **Automated Evals (LLM-as-a-Judge):** Context relevance, trajectory correctness, and safety scoring.
+
+### The Token Amplification Factor (TAF) & Unit Economics
+- **TAF (Token Amplification Factor):** $\frac{\text{Total Billed Tokens}}{\text{Functional Agent Prompt + Answer Tokens}}$. In unmanaged harnesses, TAF routinely reaches **8× to 15×**.
+- **Non-Functional Token Ratio (NFTR):** Typically **75%–85%** of monthly API bills.
+
+### The FinOps Solution Matrix
+1. **Model Tiering & SLM Offloading:** Use dedicated Small Language Models (e.g. Llama-Guard 3 8B, fine-tuned DeBERTa, or Gemini Flash) for guardrails at 95%+ discount compared to frontier models.
+2. **Deterministic-First Filtering:** Eliminate token costs on obvious attacks and PII with CPU-based regex, Aho-Corasick, and Presidio filters.
+3. **Prompt Prefix Caching:** Exploit 50%–90% provider caching discounts on static system instructions and tool schemas.
+4. **Sampled Asynchronous Evals:** Decouple inline LLM judges from live traffic; evaluate a 5% stratified random sample asynchronously via 50%-discounted Batch APIs.
+5. **Token Leaky Bucket Circuit Breakers:** Enforce hard constraints on max tool hops, turn token budgets, and dollar ceilings per turn.
+
+```
+   UNMANAGED HARNESS                            FINOPS-GOVERNED HARNESS
+   Cost / 1k turns: $81.82                      Cost / 1k turns: $17.20 (-79.0%)
+   Non-Functional Ratio: 76.5%                  Non-Functional Ratio: 31.2%
+   TAF: 4.25x                                   TAF: 1.45x
+```
+
+👉 **Full Master Reference:** Read the complete guide in [`FinOps_for_Agentic_Harness.md`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/FinOps_for_Agentic_Harness.md).  
+👉 **Interactive Simulator Tool:** Explore the runnable code in [`finops_agentic_harness/`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/finops_agentic_harness/).  
+👉 **Architecture Diagram:** View the visual architecture [`finops_agentic_harness_architecture.png`](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/finops_agentic_harness_architecture.png).
+

@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" width="1600" height="960" style="background:#0b0f19; font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="cardBgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161e2e" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="redBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <linearGradient id="greenBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="amberBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <linearGradient id="blueBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <!-- Filter Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Title & Subtitle Header -->
+  <g transform="translate(60, 40)">
+    <rect x="0" y="0" width="1480" height="90" rx="16" fill="url(#cardBgGrad)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="35" y="42" fill="url(#headerGrad)" font-size="28" font-weight="800" letter-spacing="-0.5">FinOps for the Agentic Harness: Architecture &amp; Unit Economics</text>
+    <text x="35" y="68" fill="#94a3b8" font-size="15" font-weight="400">Deconstructing &amp; Eliminating the Hidden Cost of Non-Functional LLM Calls: Guardrails, Memory Consolidation &amp; Evals</text>
+    
+    <!-- Top Right Stats Pill -->
+    <g transform="translate(1160, 24)">
+      <rect x="0" y="0" width="280" height="42" rx="10" fill="#1e293b" stroke="#334155"/>
+      <circle cx="20" cy="21" r="6" fill="#ef4444"/>
+      <text x="34" y="26" fill="#f87171" font-size="12" font-weight="700">AVG NON-FUNCTIONAL TOKENS: 78%</text>
+    </g>
+  </g>
+
+  <!-- Left Column: The Anatomy of Hidden Non-Functional Calls -->
+  <g transform="translate(60, 160)">
+    <rect x="0" y="0" width="700" height="740" rx="16" fill="url(#cardBgGrad)" stroke="#ef4444" stroke-opacity="0.3" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Column Title -->
+    <path d="M 0 16 Q 0 0 16 0 L 684 0 Q 700 0 700 16 L 700 56 L 0 56 Z" fill="#1e1b2e"/>
+    <text x="25" y="36" fill="#fca5a5" font-size="18" font-weight="700">UNMANAGED HARNESS: The Hidden Multiplier Trap</text>
+    <rect x="520" y="16" width="155" height="24" rx="6" fill="url(#redBadge)"/>
+    <text x="597" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">TAF: 11.3x AMPLIFICATION</text>
+
+    <!-- Request Ingress -->
+    <g transform="translate(25, 76)">
+      <rect x="0" y="0" width="650" height="46" rx="8" fill="#1e293b" stroke="#334155"/>
+      <text x="20" y="28" fill="#38bdf8" font-size="13" font-weight="600">1. User Query Ingress</text>
+      <text x="470" y="28" fill="#94a3b8" font-size="12">150 tokens (Functional Base)</text>
+    </g>
+
+    <!-- Non-Functional 1: Pre-Guardrails -->
+    <g transform="translate(25, 134)">
+      <rect x="0" y="0" width="650" height="100" rx="10" fill="#181825" stroke="#451a1a" stroke-width="1.5"/>
+      <rect x="15" y="14" width="130" height="22" rx="5" fill="#7f1d1d"/>
+      <text x="80" y="29" fill="#fecaca" font-size="11" font-weight="700" text-anchor="middle">PRE-GUARDRAILS</text>
+      <text x="160" y="30" fill="#f87171" font-size="13" font-weight="600">3x Synchronous LLM Calls (Frontier Model)</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• Prompt Injection &amp; Jailbreak Classifier (Frontier LLM: 450 tokens)</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• PII Entity Detection &amp; Toxic Content Scanner (600 tokens)</text>
+      <text x="540" y="80" fill="#fca5a5" font-size="12" font-weight="700">+1,050 tokens</text>
+    </g>
+
+    <!-- Non-Functional 2: State & Memory -->
+    <g transform="translate(25, 246)">
+      <rect x="0" y="0" width="650" height="110" rx="10" fill="#181825" stroke="#451a1a" stroke-width="1.5"/>
+      <rect x="15" y="14" width="165" height="22" rx="5" fill="#7f1d1d"/>
+      <text x="97" y="29" fill="#fecaca" font-size="11" font-weight="700" text-anchor="middle">MEMORY CONSOLIDATION</text>
+      <text x="195" y="30" fill="#f87171" font-size="13" font-weight="600">High Overhead State Passes</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• Working Memory Rolling Summarization Pass (1,800 tokens)</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• Episodic Memory Fact Extraction Pass (1,200 tokens)</text>
+      <text x="20" y="100" fill="#cbd5e1" font-size="12">• Context Candidates LLM Listwise Reranker (2,500 tokens)</text>
+      <text x="540" y="100" fill="#fca5a5" font-size="12" font-weight="700">+5,500 tokens</text>
+    </g>
+
+    <!-- Core Functional Agent -->
+    <g transform="translate(25, 368)">
+      <rect x="0" y="0" width="650" height="96" rx="10" fill="#0f291e" stroke="#10b981" stroke-width="1.5"/>
+      <rect x="15" y="14" width="130" height="22" rx="5" fill="#065f46"/>
+      <text x="80" y="29" fill="#a7f3d0" font-size="11" font-weight="700" text-anchor="middle">FUNCTIONAL CORE</text>
+      <text x="160" y="30" fill="#34d399" font-size="13" font-weight="600">The Actual Business Logic</text>
+      <text x="20" y="60" fill="#e2e8f0" font-size="12">• ReAct Trajectory (3 Tool Hops + System Tools Schema: 4,700 tokens)</text>
+      <text x="20" y="80" fill="#e2e8f0" font-size="12">• Final Answer Synthesis (1,200 tokens)</text>
+      <text x="510" y="80" fill="#6ee7b7" font-size="12" font-weight="700">5,900 tokens (21.7%)</text>
+    </g>
+
+    <!-- Non-Functional 3: Post-Guardrails -->
+    <g transform="translate(25, 476)">
+      <rect x="0" y="0" width="650" height="100" rx="10" fill="#181825" stroke="#451a1a" stroke-width="1.5"/>
+      <rect x="15" y="14" width="140" height="22" rx="5" fill="#7f1d1d"/>
+      <text x="85" y="29" fill="#fecaca" font-size="11" font-weight="700" text-anchor="middle">POST-GUARDRAILS</text>
+      <text x="170" y="30" fill="#f87171" font-size="13" font-weight="600">Full Context Re-Verification</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• Groundedness &amp; Hallucination Check (Repasses 5k Context + Output)</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• Corporate Tone &amp; PII Egress Leakage Audit (800 tokens)</text>
+      <text x="540" y="80" fill="#fca5a5" font-size="12" font-weight="700">+5,300 tokens</text>
+    </g>
+
+    <!-- Non-Functional 4: Inline Evals -->
+    <g transform="translate(25, 588)">
+      <rect x="0" y="0" width="650" height="100" rx="10" fill="#181825" stroke="#451a1a" stroke-width="1.5"/>
+      <rect x="15" y="14" width="170" height="22" rx="5" fill="#7f1d1d"/>
+      <text x="100" y="29" fill="#fecaca" font-size="11" font-weight="700" text-anchor="middle">LLM-AS-A-JUDGE EVALS</text>
+      <text x="200" y="30" fill="#f87171" font-size="13" font-weight="600">100% Inline Synchronous Auditing</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• Context Relevance &amp; Retrieval Quality Scoring (3,800 tokens)</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• Trajectory Correctness &amp; Safety Rating (5,200 tokens)</text>
+      <text x="540" y="80" fill="#fca5a5" font-size="12" font-weight="700">+9,000 tokens</text>
+    </g>
+
+    <!-- Bottom Total Unmanaged -->
+    <g transform="translate(25, 698)">
+      <rect x="0" y="0" width="650" height="32" rx="6" fill="#450a0a"/>
+      <text x="20" y="21" fill="#fca5a5" font-size="12" font-weight="700">TOTAL PER TURN: 27,100 TOKENS (NON-FUNCTIONAL: 78.3%) | COST: $0.078 / TURN</text>
+    </g>
+  </g>
+
+  <!-- Right Column: The FinOps Governed Architecture -->
+  <g transform="translate(840, 160)">
+    <rect x="0" y="0" width="700" height="740" rx="16" fill="url(#cardBgGrad)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Column Title -->
+    <path d="M 0 16 Q 0 0 16 0 L 684 0 Q 700 0 700 16 L 700 56 L 0 56 Z" fill="#0d231e"/>
+    <text x="25" y="36" fill="#a7f3d0" font-size="18" font-weight="700">FINOPS HARNESS: Governed Unit Economics</text>
+    <rect x="495" y="16" width="180" height="24" rx="6" fill="url(#greenBadge)"/>
+    <text x="585" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">-79.7% COST REDUCTION</text>
+
+    <!-- Ingress + Deterministic Filter -->
+    <g transform="translate(25, 76)">
+      <rect x="0" y="0" width="650" height="52" rx="8" fill="#132320" stroke="#059669"/>
+      <rect x="12" y="14" width="150" height="24" rx="5" fill="#047857"/>
+      <text x="87" y="30" fill="#d1fae5" font-size="11" font-weight="700" text-anchor="middle">DETERMINISTIC 1ST</text>
+      <text x="175" y="32" fill="#6ee7b7" font-size="13" font-weight="600">Regex &amp; Aho-Corasick Regex Filter ($0.00 Cost)</text>
+      <text x="560" y="32" fill="#a7f3d0" font-size="12" font-weight="700">0 Tokens</text>
+    </g>
+
+    <!-- FinOps Strategy 1: SLM Offloading -->
+    <g transform="translate(25, 140)">
+      <rect x="0" y="0" width="650" height="96" rx="10" fill="#0c1e28" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="15" y="14" width="150" height="22" rx="5" fill="url(#blueBadge)"/>
+      <text x="90" y="29" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">SLM OFFLOADING</text>
+      <text x="180" y="30" fill="#38bdf8" font-size="13" font-weight="600">Tiered Guardrails via Small Models</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• Llama-Guard 3 8B / Fine-tuned DeBERTa at $0.05 / 1M Tokens</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• Semantic Caching absorbs 25% repetitive checks</text>
+      <text x="530" y="80" fill="#38bdf8" font-size="12" font-weight="700">Cost: $0.00008</text>
+    </g>
+
+    <!-- FinOps Strategy 2: Prompt Caching & Reranking -->
+    <g transform="translate(25, 248)">
+      <rect x="0" y="0" width="650" height="106" rx="10" fill="#0c1e28" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="15" y="14" width="155" height="22" rx="5" fill="url(#blueBadge)"/>
+      <text x="92" y="29" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">PROMPT CACHING</text>
+      <text x="185" y="30" fill="#38bdf8" font-size="13" font-weight="600">Prefix Reuse &amp; Cross-Encoder Reranking</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• Static Tools &amp; System Persona cached at 80% discount</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• Lightweight Bi-Encoder reranker replaces expensive LLM prompt rerank</text>
+      <text x="20" y="100" fill="#cbd5e1" font-size="12">• Episodic extraction batched at task completion, not per-turn</text>
+      <text x="520" y="100" fill="#38bdf8" font-size="12" font-weight="700">Saved: 68% Tokens</text>
+    </g>
+
+    <!-- FinOps Strategy 3: Core Agent with Circuit Breakers -->
+    <g transform="translate(25, 366)">
+      <rect x="0" y="0" width="650" height="96" rx="10" fill="#132320" stroke="#10b981" stroke-width="1.5"/>
+      <rect x="15" y="14" width="165" height="22" rx="5" fill="#047857"/>
+      <text x="97" y="29" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">GOVERNED REASONING</text>
+      <text x="195" y="30" fill="#34d399" font-size="13" font-weight="600">Frontier Model with Hard Circuit Breakers</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• Token Leaky Bucket ($0.05 turn budget cap) &amp; Max 5 Hops limit</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• Cached prompt tokens: 3,500 tokens billed at $0.30/M instead of $3.00/M</text>
+      <text x="530" y="80" fill="#34d399" font-size="12" font-weight="700">Cost: $0.0075</text>
+    </g>
+
+    <!-- FinOps Strategy 4: Adaptive Post-Guardrails -->
+    <g transform="translate(25, 474)">
+      <rect x="0" y="0" width="650" height="96" rx="10" fill="#0c1e28" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="15" y="14" width="160" height="22" rx="5" fill="url(#blueBadge)"/>
+      <text x="95" y="29" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">ADAPTIVE AUDITING</text>
+      <text x="190" y="30" fill="#38bdf8" font-size="13" font-weight="600">Confidence-Gated Validation</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• If Tool Output is structured JSON with 1.0 confidence: Skip heavy check</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• SLM mini-auditor used only for unstructured claim verification</text>
+      <text x="530" y="80" fill="#38bdf8" font-size="12" font-weight="700">Cost: $0.0004</text>
+    </g>
+
+    <!-- FinOps Strategy 5: Sampled Async Evals -->
+    <g transform="translate(25, 582)">
+      <rect x="0" y="0" width="650" height="106" rx="10" fill="#1e1828" stroke="#a855f7" stroke-width="1.5"/>
+      <rect x="15" y="14" width="165" height="22" rx="5" fill="#6b21a8"/>
+      <text x="97" y="29" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">ASYNC SAMPLED EVALS</text>
+      <text x="195" y="30" fill="#c084fc" font-size="13" font-weight="600">Decoupled from Live User Path</text>
+      <text x="20" y="60" fill="#cbd5e1" font-size="12">• 5% Stratified Random Sample offloaded to PubSub / Kafka queue</text>
+      <text x="20" y="80" fill="#cbd5e1" font-size="12">• Batch API processing during off-peak windows (50% Provider Discount)</text>
+      <text x="20" y="100" fill="#cbd5e1" font-size="12">• Eliminates 95% of live evaluation token expenditure</text>
+      <text x="530" y="100" fill="#c084fc" font-size="12" font-weight="700">Effective: $0.0008</text>
+    </g>
+
+    <!-- Bottom Total Managed -->
+    <g transform="translate(25, 698)">
+      <rect x="0" y="0" width="650" height="32" rx="6" fill="#064e3b"/>
+      <text x="20" y="21" fill="#6ee7b7" font-size="12" font-weight="700">TOTAL PER TURN: 5,200 EFFECTIVE TOKENS | COST: $0.0096 / TURN (-79.7% BILL)</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,97 @@
+{
+  "monthly_turns": 4000000,
+  "naive_harness": {
+    "tokens_per_turn": 28245,
+    "cost_per_turn_usd": 0.081825,
+    "monthly_cost_usd": 327300.0,
+    "taf": 4.247368421052632,
+    "non_functional_token_ratio_pct": 76.45600991325898,
+    "non_functional_cost_ratio_pct": 72.8078215704247,
+    "breakdown": {
+      "FUNCTIONAL_CORE": {
+        "tokens": 5100,
+        "cost_usd": 0.01575,
+        "token_share_pct": 18.05629314922995,
+        "cost_share_pct": 19.24839596700275
+      },
+      "FUNCTIONAL_SYNTHESIS": {
+        "tokens": 1550,
+        "cost_usd": 0.0065,
+        "token_share_pct": 5.487696937511064,
+        "cost_share_pct": 7.943782462572564
+      },
+      "GUARDRAIL_PRE": {
+        "tokens": 1085,
+        "cost_usd": 0.0029749999999999998,
+        "token_share_pct": 3.841387856257745,
+        "cost_share_pct": 3.635808127100519
+      },
+      "GUARDRAIL_POST": {
+        "tokens": 5450,
+        "cost_usd": 0.01475,
+        "token_share_pct": 19.29545052221632,
+        "cost_share_pct": 18.02627558814543
+      },
+      "MEMORY_MANAGEMENT": {
+        "tokens": 5830,
+        "cost_usd": 0.01705,
+        "token_share_pct": 20.640821384315807,
+        "cost_share_pct": 20.837152459517263
+      },
+      "QUALITY_EVALUATION": {
+        "tokens": 9230,
+        "cost_usd": 0.0248,
+        "token_share_pct": 32.67835015046911,
+        "cost_share_pct": 30.308585395661474
+      }
+    }
+  },
+  "finops_harness": {
+    "tokens_per_turn": 9671,
+    "cost_per_turn_usd": 0.01720405,
+    "monthly_cost_usd": 68816.2,
+    "taf": 1.4542857142857142,
+    "non_functional_token_ratio_pct": 31.237721021611005,
+    "non_functional_cost_ratio_pct": 1.912631037459188,
+    "breakdown": {
+      "FUNCTIONAL_CORE": {
+        "tokens": 5100,
+        "cost_usd": 0.011375,
+        "token_share_pct": 52.7349808706442,
+        "cost_share_pct": 66.11815241178677
+      },
+      "FUNCTIONAL_SYNTHESIS": {
+        "tokens": 1550,
+        "cost_usd": 0.0055,
+        "token_share_pct": 16.0272981077448,
+        "cost_share_pct": 31.969216550754037
+      },
+      "GUARDRAIL_PRE": {
+        "tokens": 460,
+        "cost_usd": 2.3e-05,
+        "token_share_pct": 4.756488470685555,
+        "cost_share_pct": 0.13368945103042598
+      },
+      "GUARDRAIL_POST": {
+        "tokens": 820,
+        "cost_usd": 4.1e-05,
+        "token_share_pct": 8.47895770861338,
+        "cost_share_pct": 0.23831597792380285
+      },
+      "MEMORY_MANAGEMENT": {
+        "tokens": 1280,
+        "cost_usd": 0.00022799999999999999,
+        "token_share_pct": 13.235446179298934,
+        "cost_share_pct": 1.3252693406494402
+      },
+      "QUALITY_EVALUATION": {
+        "tokens": 461,
+        "cost_usd": 3.705e-05,
+        "token_share_pct": 4.766828663013132,
+        "cost_share_pct": 0.21535626785553402
+      }
+    }
+  },
+  "monthly_savings_usd": 258483.8,
+  "savings_percentage": 78.97457989611976
+}
