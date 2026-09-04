@@ -1,0 +1,499 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background:#070b14; font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+
+    <linearGradient id="tier0Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#065f46" />
+    </linearGradient>
+
+    <linearGradient id="tier1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <linearGradient id="tier2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <linearGradient id="tier3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+
+    <linearGradient id="tier4Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+
+    <linearGradient id="redBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+
+    <linearGradient id="greenBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Grid -->
+  <g opacity="0.15">
+    <path d="M 0 100 L 1920 100 M 0 200 L 1920 200 M 0 300 L 1920 300 M 0 400 L 1920 400 M 0 500 L 1920 500 M 0 600 L 1920 600 M 0 700 L 1920 700 M 0 800 L 1920 800 M 0 900 L 1920 900 M 0 1000 L 1920 1000" stroke="#334155" stroke-width="1" fill="none"/>
+    <path d="M 100 0 L 100 1080 M 200 0 L 200 1080 M 300 0 L 300 1080 M 400 0 L 400 1080 M 500 0 L 500 1080 M 600 0 L 600 1080 M 700 0 L 700 1080 M 800 0 L 800 1080 M 900 0 L 900 1080 M 1000 0 L 1000 1080 M 1100 0 L 1100 1080 M 1200 0 L 1200 1080 M 1300 0 L 1300 1080 M 1400 0 L 1400 1080 M 1500 0 L 1500 1080 M 1600 0 L 1600 1080 M 1700 0 L 1700 1080 M 1800 0 L 1800 1080" stroke="#334155" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 1. TOP HEADER & METRICS BAR -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 35)">
+    <rect x="0" y="0" width="1800" height="96" rx="16" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Title and Subtitle -->
+    <text x="35" y="44" fill="url(#headerGrad)" font-size="27" font-weight="800" letter-spacing="-0.5">HIGH-LEVEL DESIGN (HLD): FINOPS FOR THE AGENTIC HARNESS</text>
+    <text x="35" y="74" fill="#94a3b8" font-size="14.5" font-weight="500">System Architecture for Eliminating the Hidden Costs of Non-Functional LLM Calls: Guardrails, Memory Consolidation &amp; Evals</text>
+
+    <!-- Top KPI Badges -->
+    <g transform="translate(1080, 26)">
+      <!-- Unmanaged Alert Badge -->
+      <rect x="0" y="0" width="220" height="44" rx="8" fill="#2d1215" stroke="#ef4444" stroke-width="1.2"/>
+      <text x="110" y="27" fill="#fca5a5" font-size="12" font-weight="700" text-anchor="middle">UNMANAGED TAF: 11.3x (78% WASTE)</text>
+
+      <!-- Governed Savings Badge -->
+      <rect x="235" y="0" width="230" height="44" rx="8" fill="#063222" stroke="#10b981" stroke-width="1.2"/>
+      <text x="350" y="27" fill="#6ee7b7" font-size="12" font-weight="700" text-anchor="middle">FINOPS TAF: 1.45x (-79% COST)</text>
+
+      <!-- Architecture Mode -->
+      <rect x="480" y="0" width="210" height="44" rx="8" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.2"/>
+      <text x="585" y="27" fill="#c7d2fe" font-size="12" font-weight="700" text-anchor="middle">ENTERPRISE PRODUCTION HLD</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 2. CLIENT & INGRESS GATEWAY (LEFT STRIP) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 155)">
+    <!-- Container Box -->
+    <rect x="0" y="0" width="220" height="710" rx="14" fill="url(#cardGradDark)" stroke="#334155" stroke-width="1.2" filter="url(#shadow)"/>
+    
+    <!-- Title -->
+    <path d="M 0 14 Q 0 0 14 0 L 206 0 Q 220 0 220 14 L 220 48 L 0 48 Z" fill="#1e293b"/>
+    <text x="110" y="30" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">INGRESS CLIENT TIER</text>
+
+    <!-- User / App Client -->
+    <g transform="translate(15, 65)">
+      <rect x="0" y="0" width="190" height="110" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="20" y="28" fill="#38bdf8" font-size="12.5" font-weight="700">Client Applications</text>
+      <text x="20" y="52" fill="#94a3b8" font-size="11">• Web App / Copilot</text>
+      <text x="20" y="72" fill="#94a3b8" font-size="11">• Slack / Teams Bots</text>
+      <text x="20" y="92" fill="#94a3b8" font-size="11">• REST / gRPC API Clients</text>
+    </g>
+
+    <!-- Flow Arrow -->
+    <path d="M 105 185 L 105 210" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+    <polygon points="105,215 101,207 109,207" fill="#38bdf8"/>
+
+    <!-- API Gateway & Tenant Auth -->
+    <g transform="translate(15, 220)">
+      <rect x="0" y="0" width="190" height="160" rx="10" fill="#0f172a" stroke="#6366f1" stroke-width="1.2"/>
+      <text x="20" y="28" fill="#a5b4fc" font-size="12.5" font-weight="700">API Gateway &amp; IAP</text>
+      <text x="20" y="50" fill="#94a3b8" font-size="11">• Layer-7 Routing (Envoy)</text>
+      <text x="20" y="70" fill="#94a3b8" font-size="11">• Tenant Authentication</text>
+      <text x="20" y="90" fill="#94a3b8" font-size="11">• FinOps Metadata Tags:</text>
+      <text x="28" y="110" fill="#38bdf8" font-size="10.5">- TenantID (Dept / BU)</text>
+      <text x="28" y="128" fill="#38bdf8" font-size="10.5">- SessionID &amp; TaskType</text>
+      <text x="28" y="146" fill="#38bdf8" font-size="10.5">- Budget Policy Profile</text>
+    </g>
+
+    <!-- Semantic Cache Node -->
+    <g transform="translate(15, 410)">
+      <rect x="0" y="0" width="190" height="135" rx="10" fill="#0a2318" stroke="#10b981" stroke-width="1.2"/>
+      <text x="20" y="28" fill="#6ee7b7" font-size="12.5" font-weight="700">Semantic Vector Cache</text>
+      <text x="20" y="52" fill="#cbd5e1" font-size="11">• Redis / Qdrant Cache</text>
+      <text x="20" y="72" fill="#cbd5e1" font-size="11">• Cosine Sim &gt; 0.96 Hit</text>
+      <text x="20" y="94" fill="#34d399" font-size="11" font-weight="600">Hit Rate: 22% - 28%</text>
+      <text x="20" y="116" fill="#6ee7b7" font-size="10.5" font-weight="700">0 Tokens (Zero Cost)</text>
+    </g>
+
+    <!-- Unit Metric Box -->
+    <g transform="translate(15, 575)">
+      <rect x="0" y="0" width="190" height="115" rx="10" fill="#1e1520" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="20" y="26" fill="#fda4af" font-size="11.5" font-weight="700">Base User Request</text>
+      <text x="20" y="48" fill="#94a3b8" font-size="11">• Input: ~150 tokens</text>
+      <text x="20" y="68" fill="#94a3b8" font-size="11">• Latency Budget: 2.5s</text>
+      <text x="20" y="95" fill="#f43f5e" font-size="11" font-weight="700">Functional Base: 1.0x</text>
+    </g>
+  </g>
+
+  <!-- Connect Arrow: Client to Ingress Filter -->
+  <g transform="translate(280, 500)">
+    <path d="M 0 0 L 35 0" stroke="#38bdf8" stroke-width="3" fill="none"/>
+    <polygon points="38,0 28,-6 28,6" fill="#38bdf8"/>
+    <text x="18" y="-12" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">Pass</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 3. TIER 0: DETERMINISTIC & HEURISTIC ENGINE ($0.00 / 0 TOKENS) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(320, 155)">
+    <rect x="0" y="0" width="270" height="710" rx="14" fill="url(#cardGradDark)" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Header -->
+    <path d="M 0 14 Q 0 0 14 0 L 256 0 Q 270 0 270 14 L 270 48 L 0 48 Z" fill="url(#tier0Grad)"/>
+    <text x="135" y="30" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">TIER 0: DETERMINISTIC FILTER</text>
+    <rect x="15" y="58" width="240" height="26" rx="6" fill="#064e3b"/>
+    <text x="135" y="75" fill="#a7f3d0" font-size="11" font-weight="700" text-anchor="middle">COST: $0.00 | CONSUMES: 0 TOKENS</text>
+
+    <!-- Component 1: Injection Regex -->
+    <g transform="translate(15, 96)">
+      <rect x="0" y="0" width="240" height="125" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#34d399" font-size="12" font-weight="700">1. Aho-Corasick Regex Scanner</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Scans 1,500+ injection signatures</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Catches "Ignore previous instructions"</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Execution: Sub-millisecond (CPU)</text>
+      <text x="16" y="108" fill="#6ee7b7" font-size="11" font-weight="600">Filters 40% of malicious attempts</text>
+    </g>
+
+    <!-- Component 2: Presidio PII Masker -->
+    <g transform="translate(15, 235)">
+      <rect x="0" y="0" width="240" height="135" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#34d399" font-size="12" font-weight="700">2. CPU Presidio / Regex PII Masker</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Deterministic regex for SSN &amp; Phone</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Luhn algorithm credit card check</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Fast named entity recognition (spaCy)</text>
+      <text x="16" y="108" fill="#94a3b8" font-size="11">• Redacts before state memory storage</text>
+      <text x="16" y="126" fill="#6ee7b7" font-size="11" font-weight="600">Eliminates 100% LLM PII calls</text>
+    </g>
+
+    <!-- Component 3: Policy & Scope Filter -->
+    <g transform="translate(15, 385)">
+      <rect x="0" y="0" width="240" height="120" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#34d399" font-size="12" font-weight="700">3. Schema &amp; Grammar Gate</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Pydantic / JSON schema validator</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Whitelisted API routing parser</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Rejects malformed payload early</text>
+      <text x="16" y="108" fill="#6ee7b7" font-size="11" font-weight="600">Blocks off-topic prompt burn</text>
+    </g>
+
+    <!-- Component 4: Local Bi-Encoder Embeddings -->
+    <g transform="translate(15, 520)">
+      <rect x="0" y="0" width="240" height="165" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#34d399" font-size="12" font-weight="700">4. Local Embedding Reranker</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Local BGE-Reranker / Cross-Encoder</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Reranks top-20 candidate chunks</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Replaces frontier LLM reranking pass</text>
+      <text x="16" y="112" fill="#f87171" font-size="10.5">Unmanaged LLM Reranker: 2,500 tokens</text>
+      <text x="16" y="132" fill="#34d399" font-size="11" font-weight="700">FinOps Local Rerank: 0 LLM Tokens</text>
+      <text x="16" y="152" fill="#a7f3d0" font-size="10.5">Savings: $0.00725 / turn</text>
+    </g>
+  </g>
+
+  <!-- Connect Arrow: Tier 0 to Tier 1 -->
+  <g transform="translate(590, 500)">
+    <path d="M 0 0 L 35 0" stroke="#10b981" stroke-width="3" fill="none"/>
+    <polygon points="38,0 28,-6 28,6" fill="#10b981"/>
+    <text x="18" y="-12" fill="#10b981" font-size="11" font-weight="700" text-anchor="middle">Pass</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 4. TIER 1: SLM GUARDRAILS & STATE CONTEXT LAYER -->
+  <!-- ========================================================================= -->
+  <g transform="translate(630, 155)">
+    <rect x="0" y="0" width="290" height="710" rx="14" fill="url(#cardGradDark)" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Header -->
+    <path d="M 0 14 Q 0 0 14 0 L 276 0 Q 290 0 290 14 L 290 48 L 0 48 Z" fill="url(#tier1Grad)"/>
+    <text x="145" y="30" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">TIER 1: SLM GUARDRAILS &amp; STATE</text>
+    <rect x="15" y="58" width="260" height="26" rx="6" fill="#082f49"/>
+    <text x="145" y="75" fill="#7dd3fc" font-size="11" font-weight="700" text-anchor="middle">SLM OFFLOADING: $0.05 / 1M TOKENS</text>
+
+    <!-- Component 1: Dedicated Guardrail SLM -->
+    <g transform="translate(15, 96)">
+      <rect x="0" y="0" width="260" height="155" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#38bdf8" font-size="12" font-weight="700">1. Llama-Guard 3 8B Classifier</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Dedicated Small Language Model</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Multi-label safety taxonomy scan</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Evaluates complex linguistic jailbreaks</text>
+      <text x="16" y="112" fill="#f87171" font-size="10.5">Unmanaged Frontier LLM: $0.00298</text>
+      <text x="16" y="132" fill="#38bdf8" font-size="11" font-weight="700">SLM Execution Cost: $0.000023</text>
+      <text x="16" y="148" fill="#7dd3fc" font-size="10.5">Cost Reduction: 99.2%</text>
+    </g>
+
+    <!-- Component 2: Lightweight Working Memory Summarizer -->
+    <g transform="translate(15, 265)">
+      <rect x="0" y="0" width="260" height="155" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#38bdf8" font-size="12" font-weight="700">2. Rolling Working Memory Manager</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Sliding window compaction trigger</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Offloads summary to Tier-2 SLM</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Uses Gemini 1.5 Flash / GPT-4o-mini</text>
+      <text x="16" y="112" fill="#f87171" font-size="10.5">Unmanaged Frontier LLM: $0.00600</text>
+      <text x="16" y="132" fill="#38bdf8" font-size="11" font-weight="700">Tier-2 Flash Summary: $0.00023</text>
+      <text x="16" y="148" fill="#7dd3fc" font-size="10.5">Cost Reduction: 96.1%</text>
+    </g>
+
+    <!-- Component 3: Deferred Episodic Extraction -->
+    <g transform="translate(15, 435)">
+      <rect x="0" y="0" width="260" height="135" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#38bdf8" font-size="12" font-weight="700">3. Episodic Memory Consolidation</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Deferred extraction policy:</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">  Runs once at session close (not per turn)</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Vector DB fact indexing (pgvector)</text>
+      <text x="16" y="112" fill="#34d399" font-size="11" font-weight="700">Eliminates 75% Extraction Calls</text>
+    </g>
+
+    <!-- Component 4: Cache Hydration Node -->
+    <g transform="translate(15, 585)">
+      <rect x="0" y="0" width="260" height="100" rx="10" fill="#082f49" stroke="#0284c7"/>
+      <text x="16" y="24" fill="#38bdf8" font-size="12" font-weight="700">Hydrated Context Payload</text>
+      <text x="16" y="46" fill="#cbd5e1" font-size="11">• Clean, sanitized user query</text>
+      <text x="16" y="66" fill="#cbd5e1" font-size="11">• Ranked high-signal chunks (&lt;2k toks)</text>
+      <text x="16" y="88" fill="#7dd3fc" font-size="11" font-weight="700">Token Waste Eliminated: ~6,550 toks</text>
+    </g>
+  </g>
+
+  <!-- Connect Arrow: Tier 1 to Tier 2 -->
+  <g transform="translate(920, 500)">
+    <path d="M 0 0 L 35 0" stroke="#0284c7" stroke-width="3" fill="none"/>
+    <polygon points="38,0 28,-6 28,6" fill="#0284c7"/>
+    <text x="18" y="-12" fill="#0284c7" font-size="11" font-weight="700" text-anchor="middle">Execute</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 5. TIER 2: COGNITIVE AGENT & FINOPS CIRCUIT BREAKERS (CORE) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(960, 155)">
+    <rect x="0" y="0" width="350" height="710" rx="14" fill="url(#cardGradDark)" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Header -->
+    <path d="M 0 14 Q 0 0 14 0 L 336 0 Q 350 0 350 14 L 350 48 L 0 48 Z" fill="url(#tier2Grad)"/>
+    <text x="175" y="30" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">TIER 2: COGNITIVE AGENT &amp; HARNESS</text>
+    <rect x="15" y="58" width="320" height="26" rx="6" fill="#1e1b4b"/>
+    <text x="175" y="75" fill="#c7d2fe" font-size="11" font-weight="700" text-anchor="middle">FRONTIER MODEL WITH GOVERNED BUDGET</text>
+
+    <!-- Prompt Prefix Caching Engine -->
+    <g transform="translate(15, 96)">
+      <rect x="0" y="0" width="320" height="135" rx="10" fill="#1e1b4b" stroke="#818cf8"/>
+      <text x="16" y="24" fill="#a5b4fc" font-size="12" font-weight="700">1. Prompt Prefix Caching Engine</text>
+      <text x="16" y="46" fill="#cbd5e1" font-size="11">• Static System Persona &amp; Rules (1,500 toks)</text>
+      <text x="16" y="66" fill="#cbd5e1" font-size="11">• OpenAPI Tool Definitions (2,000 toks)</text>
+      <text x="16" y="86" fill="#cbd5e1" font-size="11">• Pinned Static Prefix = Automatic Cache Hit</text>
+      <text x="16" y="112" fill="#34d399" font-size="11" font-weight="700">Anthropic 90% / OpenAI 50% Cache Discount</text>
+      <text x="16" y="128" fill="#a7f3d0" font-size="10.5">3,500 Cached Tokens billed at $0.30/M vs $3.00/M</text>
+    </g>
+
+    <!-- ReAct Trajectory Loop & MCP Sandboxed Tools -->
+    <g transform="translate(15, 245)">
+      <rect x="0" y="0" width="320" height="175" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#818cf8" font-size="12" font-weight="700">2. Frontier Reasoning (ReAct Agent)</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Model: GPT-4o / Claude 3.5 Sonnet / Gemini 1.5 Pro</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• ReAct Loop: Thought ➔ Action ➔ Observation</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• MCP Server Sandboxed Execution (Docker/MicroVM)</text>
+      <text x="16" y="106" fill="#94a3b8" font-size="11">• Dynamic Structured JSON Schema Repair</text>
+      <text x="16" y="132" fill="#6ee7b7" font-size="11" font-weight="700">Functional Core: 5,900 billable tokens</text>
+      <text x="16" y="152" fill="#94a3b8" font-size="11">Direct user business logic and answer delivery</text>
+    </g>
+
+    <!-- FinOps Circuit Breaker Engine -->
+    <g transform="translate(15, 435)">
+      <rect x="0" y="0" width="320" height="150" rx="10" fill="#2d1215" stroke="#ef4444" stroke-width="1.3"/>
+      <text x="16" y="24" fill="#fca5a5" font-size="12" font-weight="700">3. FinOps Circuit Breaker Engine</text>
+      <text x="16" y="46" fill="#cbd5e1" font-size="11">• Max Trajectory Hops: Hard cap at 5 steps</text>
+      <text x="16" y="66" fill="#cbd5e1" font-size="11">• Leaky Bucket Token Budget: $0.05 / turn cap</text>
+      <text x="16" y="86" fill="#cbd5e1" font-size="11">• Runaway Loop Killer: Halts repetitive failures</text>
+      <text x="16" y="112" fill="#f87171" font-size="11" font-weight="700">Eliminates $100+ Infinite Loop Horror Stories</text>
+      <text x="16" y="132" fill="#fca5a5" font-size="10.5">Deterministic fallback gracefully returns to user</text>
+    </g>
+
+    <!-- Final Synthesis Block -->
+    <g transform="translate(15, 600)">
+      <rect x="0" y="0" width="320" height="85" rx="10" fill="#09211b" stroke="#10b981"/>
+      <text x="16" y="24" fill="#34d399" font-size="12" font-weight="700">4. Final Answer Synthesizer</text>
+      <text x="16" y="46" fill="#cbd5e1" font-size="11">• Context-aware final response assembly</text>
+      <text x="16" y="68" fill="#a7f3d0" font-size="11" font-weight="700">Turn Cost with Cached Prefix: $0.0113</text>
+    </g>
+  </g>
+
+  <!-- Connect Arrow: Tier 2 to Tier 3 -->
+  <g transform="translate(1310, 500)">
+    <path d="M 0 0 L 35 0" stroke="#6366f1" stroke-width="3" fill="none"/>
+    <polygon points="38,0 28,-6 28,6" fill="#6366f1"/>
+    <text x="18" y="-12" fill="#6366f1" font-size="11" font-weight="700" text-anchor="middle">Audit</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 6. TIER 3: ADAPTIVE POST-GUARDRAILS & EGRESS LAYER -->
+  <!-- ========================================================================= -->
+  <g transform="translate(1350, 155)">
+    <rect x="0" y="0" width="250" height="710" rx="14" fill="url(#cardGradDark)" stroke="#0d9488" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Header -->
+    <path d="M 0 14 Q 0 0 14 0 L 236 0 Q 250 0 250 14 L 250 48 L 0 48 Z" fill="url(#tier3Grad)"/>
+    <text x="125" y="30" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">TIER 3: ADAPTIVE EGRESS</text>
+    <rect x="15" y="58" width="220" height="26" rx="6" fill="#134e4a"/>
+    <text x="125" y="75" fill="#5eead4" font-size="11" font-weight="700" text-anchor="middle">CONFIDENCE-GATED AUDITS</text>
+
+    <!-- Confidence Gating Logic -->
+    <g transform="translate(15, 96)">
+      <rect x="0" y="0" width="220" height="165" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#2dd4bf" font-size="12" font-weight="700">1. Confidence Gating Router</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Checks tool verification status</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• If Tool returns structured JSON:</text>
+      <text x="24" y="86" fill="#34d399" font-size="10.5">➔ SKIP full LLM groundedness</text>
+      <text x="16" y="106" fill="#94a3b8" font-size="11">• If Unstructured reasoning:</text>
+      <text x="24" y="126" fill="#38bdf8" font-size="10.5">➔ Route to Mini-SLM Auditor</text>
+      <text x="16" y="150" fill="#5eead4" font-size="11" font-weight="700">Skips 70% of Full Context Checks</text>
+    </g>
+
+    <!-- Lightweight SLM Auditor -->
+    <g transform="translate(15, 275)">
+      <rect x="0" y="0" width="220" height="145" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#2dd4bf" font-size="12" font-weight="700">2. Lightweight SLM Auditor</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Model: Llama-Guard 3 / 4o-mini</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Checks claim support (800 toks)</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Egress PII &amp; API key masking</text>
+      <text x="16" y="112" fill="#f87171" font-size="10.5">Unmanaged LLM Repass: $0.0147</text>
+      <text x="16" y="132" fill="#2dd4bf" font-size="11" font-weight="700">Adaptive SLM: $0.00004</text>
+    </g>
+
+    <!-- Egress Sanitizer -->
+    <g transform="translate(15, 435)">
+      <rect x="0" y="0" width="220" height="120" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="24" fill="#2dd4bf" font-size="12" font-weight="700">3. Deterministic Egress Gate</text>
+      <text x="16" y="46" fill="#94a3b8" font-size="11">• Fast regex secret scrubbing</text>
+      <text x="16" y="66" fill="#94a3b8" font-size="11">• Corporate tone disclaimer append</text>
+      <text x="16" y="86" fill="#94a3b8" font-size="11">• Emits response payload to user</text>
+      <text x="16" y="108" fill="#34d399" font-size="10.5" font-weight="700">Safe User Delivery ($0.00)</text>
+    </g>
+
+    <!-- Telemetry Emitter -->
+    <g transform="translate(15, 570)">
+      <rect x="0" y="0" width="220" height="115" rx="10" fill="#134e4a" stroke="#0d9488"/>
+      <text x="16" y="24" fill="#5eead4" font-size="12" font-weight="700">Event Telemetry Emitter</text>
+      <text x="16" y="46" fill="#cbd5e1" font-size="11">• Emits sanitized turn transcript</text>
+      <text x="16" y="66" fill="#cbd5e1" font-size="11">• Tags Token Counts &amp; Latency</text>
+      <text x="16" y="88" fill="#a7f3d0" font-size="11" font-weight="700">Asynchronous PubSub Hook</text>
+    </g>
+  </g>
+
+  <!-- Connect Arrow: Tier 3 to Tier 4 (Async Queue) -->
+  <g transform="translate(1600, 500)">
+    <path d="M 0 0 L 30 0" stroke="#a855f7" stroke-width="3" stroke-dasharray="4,4" fill="none"/>
+    <polygon points="33,0 23,-6 23,6" fill="#a855f7"/>
+    <text x="15" y="-12" fill="#c084fc" font-size="10.5" font-weight="700" text-anchor="middle">Async Queue</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 7. TIER 4: ASYNCHRONOUS FINOPS EVALS & OBSERVABILITY PLANE -->
+  <!-- ========================================================================= -->
+  <g transform="translate(1635, 155)">
+    <rect x="0" y="0" width="225" height="710" rx="14" fill="url(#cardGradDark)" stroke="#9333ea" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Header -->
+    <path d="M 0 14 Q 0 0 14 0 L 211 0 Q 225 0 225 14 L 225 48 L 0 48 Z" fill="url(#tier4Grad)"/>
+    <text x="112" y="30" fill="#ffffff" font-size="12.5" font-weight="800" text-anchor="middle">TIER 4: ASYNC FINOPS &amp; EVALS</text>
+    <rect x="10" y="58" width="205" height="26" rx="6" fill="#3b0764"/>
+    <text x="112" y="75" fill="#e9d5ff" font-size="10.5" font-weight="700" text-anchor="middle">BATCH APIS: 50% OFF-PEAK</text>
+
+    <!-- Component 1: Stratified Sampler -->
+    <g transform="translate(10, 96)">
+      <rect x="0" y="0" width="205" height="135" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="12" y="24" fill="#c084fc" font-size="11.5" font-weight="700">1. 5% Stratified Sampler</text>
+      <text x="12" y="44" fill="#94a3b8" font-size="10.5">• Decoupled from user path</text>
+      <text x="12" y="62" fill="#94a3b8" font-size="10.5">• 95% of traffic NOT evaluated</text>
+      <text x="12" y="80" fill="#94a3b8" font-size="10.5">• Stratified by tenant &amp; task</text>
+      <text x="12" y="98" fill="#94a3b8" font-size="10.5">• User Latency: 0.0 ms</text>
+      <text x="12" y="120" fill="#c084fc" font-size="10.5" font-weight="700">Cuts Eval Bills by 95%</text>
+    </g>
+
+    <!-- Component 2: Batch API LLM-as-a-Judge -->
+    <g transform="translate(10, 245)">
+      <rect x="0" y="0" width="205" height="145" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="12" y="24" fill="#c084fc" font-size="11.5" font-weight="700">2. Batch LLM-as-a-Judge</text>
+      <text x="12" y="44" fill="#94a3b8" font-size="10.5">• Off-peak OpenAI/Anthropic</text>
+      <text x="12" y="62" fill="#94a3b8" font-size="10.5">  Batch API Processing</text>
+      <text x="12" y="80" fill="#94a3b8" font-size="10.5">• Context Relevance &amp; Fidelity</text>
+      <text x="12" y="98" fill="#94a3b8" font-size="10.5">• Model: GPT-4o-mini Judge</text>
+      <text x="12" y="118" fill="#f87171" font-size="10">Unmanaged Inline: $0.0248</text>
+      <text x="12" y="134" fill="#c084fc" font-size="10.5" font-weight="700">Async Batch: $0.000037</text>
+    </g>
+
+    <!-- Component 3: FinOps Showback & Chargeback -->
+    <g transform="translate(10, 405)">
+      <rect x="0" y="0" width="205" height="150" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="12" y="24" fill="#c084fc" font-size="11.5" font-weight="700">3. FinOps Ledger &amp; Billing</text>
+      <text x="12" y="44" fill="#94a3b8" font-size="10.5">• Multi-tenant Chargeback</text>
+      <text x="12" y="62" fill="#94a3b8" font-size="10.5">• Automated Invoicing by BU</text>
+      <text x="12" y="80" fill="#94a3b8" font-size="10.5">• Real-time TAF Monitoring</text>
+      <text x="12" y="98" fill="#94a3b8" font-size="10.5">• Anomaly Alerting Webhooks</text>
+      <text x="12" y="122" fill="#34d399" font-size="10.5" font-weight="700">Full Auditability &amp; ROI</text>
+    </g>
+
+    <!-- Component 4: Continuous CI/CD Evals -->
+    <g transform="translate(10, 570)">
+      <rect x="0" y="0" width="205" height="115" rx="10" fill="#3b0764" stroke="#9333ea"/>
+      <text x="12" y="24" fill="#e9d5ff" font-size="11.5" font-weight="700">Continuous AI CI/CD</text>
+      <text x="12" y="44" fill="#cbd5e1" font-size="10.5">• Offline benchmark runner</text>
+      <text x="12" y="62" fill="#cbd5e1" font-size="10.5">• Synthetic regression tests</text>
+      <text x="12" y="82" fill="#a7f3d0" font-size="10.5" font-weight="700">Non-Production Spend Only</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 8. BOTTOM ENTERPRISE SUMMARY LEDGER & EQUATION BAR -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 890)">
+    <rect x="0" y="0" width="1800" height="145" rx="14" fill="url(#cardGradDark)" stroke="#38bdf8" stroke-width="1.3" filter="url(#shadow)"/>
+
+    <!-- Section Title -->
+    <text x="35" y="32" fill="#38bdf8" font-size="14" font-weight="800">FINOPS UNIT ECONOMICS &amp; COST EQUATION BREAKDOWN</text>
+    <text x="35" y="54" fill="#cbd5e1" font-size="12">Cost Equation: C_total = C_functional + C_guardrails(SLM) + C_memory(Tier2) + C_evals(Async 5%) + C_prefix_caching(-80%)</text>
+
+    <!-- 4 Summary KPI Cards -->
+    <g transform="translate(35, 68)">
+      <!-- KPI 1 -->
+      <rect x="0" y="0" width="410" height="62" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="18" y="24" fill="#94a3b8" font-size="11" font-weight="600">COST PER 1,000 TURNS</text>
+      <text x="18" y="46" fill="#f87171" font-size="12">Unmanaged: $81.82</text>
+      <text x="210" y="46" fill="#34d399" font-size="13" font-weight="800">FinOps: $17.20 (-79.0%)</text>
+
+      <!-- KPI 2 -->
+      <rect x="430" y="0" width="410" height="62" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="18" y="24" fill="#94a3b8" font-size="11" font-weight="600">TOKEN AMPLIFICATION FACTOR (TAF)</text>
+      <text x="18" y="46" fill="#f87171" font-size="12">Unmanaged: 4.25x - 11.3x</text>
+      <text x="230" y="46" fill="#38bdf8" font-size="13" font-weight="800">FinOps: 1.45x Governed</text>
+
+      <!-- KPI 3 -->
+      <rect x="860" y="0" width="410" height="62" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="18" y="24" fill="#94a3b8" font-size="11" font-weight="600">NON-FUNCTIONAL TOKEN RATIO (NFTR)</text>
+      <text x="18" y="46" fill="#f87171" font-size="12">Unmanaged: 76.5% Overhead</text>
+      <text x="230" y="46" fill="#34d399" font-size="13" font-weight="800">FinOps: 31.2% Overhead</text>
+
+      <!-- KPI 4 -->
+      <rect x="1290" y="0" width="440" height="62" rx="8" fill="#062b1e" stroke="#10b981"/>
+      <text x="18" y="24" fill="#6ee7b7" font-size="11" font-weight="700">ENTERPRISE SCALE (4M MONTHLY TURNS)</text>
+      <text x="18" y="48" fill="#fca5a5" font-size="12">Unmanaged: $327,300/mo</text>
+      <text x="220" y="48" fill="#34d399" font-size="14" font-weight="800">NET SAVINGS: $3.10M / YR</text>
+    </g>
+  </g>
+</svg>
