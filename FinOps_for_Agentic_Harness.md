@@ -17,6 +17,13 @@ This guide establishes the **FinOps Framework for Agentic AI**, deconstructs the
 
 ---
 
+### Architecture & Non-Functional Cost Dynamics
+
+![FinOps for Agentic Harness Architecture Diagram](file:///Users/biswanathgiri/GenAI%26AgenticAI%20-Learing%20Roadmap/finops_agentic_harness_architecture_diagram.png)
+
+---
+
+
 ```
                        THE TOKEN AMPLIFICATION FACTOR (TAF)
                        
